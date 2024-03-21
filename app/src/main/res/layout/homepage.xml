@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1A"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#171715">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/home_button1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_bars"
+                android:tint="#fff"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/welcome_button1"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_1" />
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/home_button3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@drawable/corner_prf"
+                android:backgroundTint="#2D2B2A"
+                android:contentDescription="przycisk logowanie"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user"
+                android:tint="#fff"
+                tools:ignore="UseAppTint" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/podany_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/podany_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/podana_nazwa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/podane_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corner_gray"
+            android:backgroundTint="#BFBFBF"
+            android:text="Wyloguj się"
+            android:textColor="#6B6B6B"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#171715">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/home"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home"
+                android:tint="#fff"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/film"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/film"
+                android:tint="#838181"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator11"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/tv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tv_retro"
+                android:tint="#838181"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/cloud"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cloud"
+                android:tint="#838181"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search"
+                android:tint="#838181"
+                tools:ignore="UseAppTint" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

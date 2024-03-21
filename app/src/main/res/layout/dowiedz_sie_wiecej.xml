@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dsw"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:background="#97000000">
+
+        <ImageButton
+            android:id="@+id/welcome_button1"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:contentDescription="przycisk menu"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_1" />
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="ZALOGUJ SIE"
+            android:textAlignment="center"
+            android:textColor="#DAD9D9"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="14dp"
+            android:layout_marginRight="12dp"
+            android:visibility="visible"
+            android:id="@+id/dsw_logowanie"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#97000000"
+        android:padding="20dp">
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dlaczego warto skorzystać?"
+            android:textAlignment="viewStart"
+            android:textColor="#DAD9D9"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/unlock"
+                android:background="@drawable/corner_dsw"
+                android:contentDescription="przycisk ustawien"
+                android:backgroundTint="#FF1A55"
+                android:scaleType="fitCenter"
+                android:tint="#EDEDED"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Uzyskaj dostęp do ulubionych filmów, bajek, seriali czy nawet gier."
+                android:textAlignment="viewStart"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#B8B6B6"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/feather"
+                android:background="@drawable/corner_dsw"
+                android:contentDescription="przycisk ustawien"
+                android:backgroundTint="#FF1A55"
+                android:scaleType="fitCenter"
+                android:tint="#EDEDED"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Wszystkie twoje ulubione marki w jednym miejscu - komedie, dramaty..."
+                android:textAlignment="viewStart"
+                android:textColor="#B8B6B6"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/card"
+                android:background="@drawable/corner_dsw"
+                android:contentDescription="przycisk ustawien"
+                android:backgroundTint="#FF1A55"
+                android:scaleType="fitCenter"
+                android:tint="#EDEDED"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Anuluj w dowolnym momencie"
+                android:textAlignment="viewStart"
+                android:textColor="#B8B6B6"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/cancel"
+                android:background="@drawable/corner_dsw"
+                android:contentDescription="przycisk ustawien"
+                android:backgroundTint="#FF1A55"
+                android:scaleType="fitCenter"
+                android:tint="#EDEDED"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:text="Nieograniczona liczba pobrań i odtworzeń na nawet 4 urządzeniach jednocześnie, w tym możliwość utworzenia 4 profili."
+                android:textAlignment="viewStart"
+                android:textColor="#B8B6B6"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/corner_login"
+            android:backgroundTint="#AA1F35"
+            android:fontFamily="@font/aldrich"
+            android:text="Zacznij już dziś!"
+            android:textColor="@color/white"
+            android:textColorHighlight="#AA1F35"
+            android:textColorLink="#AA1F35"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:id="@+id/dsw_zacznij" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/corner_login"
+            android:backgroundTint="#252525"
+            android:fontFamily="@font/aldrich"
+            android:text="Z powrotem"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:id="@+id/dsw_powrot" />
+
+    </LinearLayout>
+</LinearLayout>
