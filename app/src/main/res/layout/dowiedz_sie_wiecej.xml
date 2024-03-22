@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_dsw"
+    android:background="#15191C"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="start|center_vertical"
-        android:orientation="horizontal"
-        android:background="#97000000">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/welcome_button1"
@@ -23,6 +22,8 @@
             android:background="@null"
             android:contentDescription="przycisk menu"
             android:scaleType="fitCenter"
+            android:tint="#6EC8FA"
+            tools:ignore="UseAppTint"
             android:src="@drawable/img_1" />
 
         <View
@@ -46,185 +47,421 @@
             android:clickable="true" />
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#97000000"
-        android:padding="20dp">
+        android:scrollbars="none">
 
-        <View
-            android:id="@+id/separator2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dlaczego warto skorzystać?"
-            android:textAlignment="viewStart"
-            android:textColor="#DAD9D9"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:visibility="visible" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <ImageButton
-                android:layout_width="48dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:padding="10dp"
-                android:src="@drawable/unlock"
-                android:background="@drawable/corner_dsw"
-                android:contentDescription="przycisk ustawien"
-                android:backgroundTint="#FF1A55"
-                android:scaleType="fitCenter"
-                android:tint="#EDEDED"
-                tools:ignore="UseAppTint" />
+                android:text="Co to jest NestNet?"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textColor="#DAD9D9"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="NestNet to idealne miejsce dla graczy i twórców gier. Oferuje bogaty wybór tytułów, aktywną społeczność oraz wsparcie dla nowych projektów."
+                android:textAlignment="center"
+                android:textColor="#B8B6B6"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="35dp"
+                android:visibility="visible"
+                android:clickable="true" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="Uzyskaj dostęp do ulubionych filmów, bajek, seriali czy nawet gier."
+                android:layout_height="wrap_content"
+                android:text="Dlaczego warto skorzystać?"
                 android:textAlignment="viewStart"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="#B8B6B6"
-                android:textSize="18sp"
-                android:visibility="visible"
-                tools:ignore="RtlCompat" />
-        </LinearLayout>
+                android:textColor="#DAD9D9"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:padding="10dp"
-                android:src="@drawable/feather"
-                android:background="@drawable/corner_dsw"
-                android:contentDescription="przycisk ustawien"
-                android:backgroundTint="#FF1A55"
-                android:scaleType="fitCenter"
-                android:tint="#EDEDED"
-                tools:ignore="UseAppTint" />
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:src="@drawable/unlock"
+                    android:background="@drawable/corner_dsw"
+                    android:contentDescription="przycisk ustawien"
+                    android:backgroundTint="#6EC8FA"
+                    android:scaleType="fitCenter"
+                    android:tint="#15191C"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Otwiera drzwi do niezliczonych światów gier, które czekają na odkrycie. Od epickich przygód po emocjonujące wyzwania, znajdziesz tutaj coś dla siebie, zawsze mając możliwość eksploracji nowych światach i doświadczenia niesamowitych historii."
+                    android:textAlignment="viewStart"
+                    android:textColor="#B8B6B6"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:src="@drawable/feather"
+                    android:background="@drawable/corner_dsw"
+                    android:contentDescription="przycisk ustawien"
+                    android:backgroundTint="#6EC8FA"
+                    android:scaleType="fitCenter"
+                    android:tint="#15191C"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Pozwala ci wyrazić swoją kreatywność i pasję poprzez tworzenie własnych gier. Dzięki dostępnym narzędziom i wsparciu społeczności, możesz rozwijać swoje umiejętności i podzielić się swoimi projektami z innymi, otwierając drzwi do świata twórców gier."
+                    android:textAlignment="viewStart"
+                    android:textColor="#B8B6B6"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:src="@drawable/card"
+                    android:background="@drawable/corner_dsw"
+                    android:contentDescription="przycisk ustawien"
+                    android:backgroundTint="#6EC8FA"
+                    android:scaleType="fitCenter"
+                    android:tint="#15191C"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Zapewnia bezpieczne i wygodne płatności, dzięki czemu możesz nabyć swoje ulubione tytuły bez obaw. Z szerokim wyborem metod płatności i zabezpieczonymi transakcjami, korzystanie z platformy NestNet jest proste i pewne."
+                    android:textAlignment="viewStart"
+                    android:textColor="#B8B6B6"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="4dp"
+                    android:src="@drawable/cancel"
+                    android:background="@drawable/corner_dsw"
+                    android:contentDescription="przycisk ustawien"
+                    android:backgroundTint="#6EC8FA"
+                    android:scaleType="fitCenter"
+                    android:tint="#15191C"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Oferuje bogactwo możliwości rywalizacji w różnorodnych grach multiplayer. Niezależnie od tego, czy lubisz strategiczne potyczki, dynamiczne strzelanki czy szybkie rozgrywki, Steam daje ci szansę na stawienie czoła wyzwaniom i zdobycie zwycięstwa."
+                    android:textAlignment="viewStart"
+                    android:textColor="#B8B6B6"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="Wszystkie twoje ulubione marki w jednym miejscu - komedie, dramaty..."
-                android:textAlignment="viewStart"
-                android:textColor="#B8B6B6"
-                android:textSize="18sp"
-                android:visibility="visible"
-                tools:ignore="RtlCompat" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:padding="10dp"
-                android:src="@drawable/card"
-                android:background="@drawable/corner_dsw"
-                android:contentDescription="przycisk ustawien"
-                android:backgroundTint="#FF1A55"
-                android:scaleType="fitCenter"
-                android:tint="#EDEDED"
-                tools:ignore="UseAppTint" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:text="Funkcje NestNet"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#FFF" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="Anuluj w dowolnym momencie"
-                android:textAlignment="viewStart"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Nasza stała praca nad aktualizacjami w Aplikacji NestNet przynosi wiele korzyści, które sprawiają, że doświadczenie użytkowników staje się jeszcze bardziej satysfakcjonujące:"
                 android:textColor="#B8B6B6"
-                android:textSize="18sp"
-                android:visibility="visible"
-                tools:ignore="RtlCompat" />
-        </LinearLayout>
+                android:textSize="18dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
 
-            <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:padding="4dp"
-                android:src="@drawable/cancel"
-                android:background="@drawable/corner_dsw"
-                android:contentDescription="przycisk ustawien"
-                android:backgroundTint="#FF1A55"
-                android:scaleType="fitCenter"
-                android:tint="#EDEDED"
-                tools:ignore="UseAppTint" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/corner_dsww"
+                        android:backgroundTint="#292a2c"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Box 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:text="Chat na NestNet"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:layout_width="231dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Pogadaj ze znajomymi i grupami, używając tekstu lub głosu, nie wychodząc z Aplikacji NestNet. Możesz udostępniać wideo, tweety, GIF-y, naklejki, emotki i więcej – pamiętaj jednak o umiarze w korzystaniu z nich."
+                            android:textColor="#AAAAAA"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/corner_dsww"
+                        android:backgroundTint="#292a2c"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Box 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:text="Transmisja NestNet"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:layout_width="231dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Wystartuj streaming swoich rozgrywek na żywo zaledwie jednym kliknięciem i podziel się nimi ze swoimi znajomymi lub całym społecznością w łatwy i szybki sposób."
+                            android:textColor="#AAAAAA"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/corner_dsww"
+                        android:backgroundTint="#292a2c"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Box 3 -->
+                        <TextView
+                            android:layout_width="225dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Wczesny dostęp do gier"
+                            android:textColor="#fff"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="231dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Odkrywaj, graj i zaangażuj się w gry już na etapie ich rozwoju. Bądź pierwszą osobą, która zauważy nadchodzące zmiany i weź udział w tym procesie jako aktywny uczestnik."
+                            android:textColor="#AAAAAA"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/corner_dsww"
+                        android:backgroundTint="#292a2c"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Box 4 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Wielojęzyczność"
+                            android:textColor="#fff"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="231dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Budowanie globalnej społeczności ma dla nas ogromne znaczenie, dlatego nasz klient obecnie wspiera aż 28 języków, aby umożliwić uczestnictwo jak największej liczbie osób z różnych zakątków świata."
+                            android:textColor="#AAAAAA"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/corner_dsww"
+                        android:backgroundTint="#292a2c"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Box 5 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:text="Łatwe kupowanie"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:layout_width="231dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Nasza sklep wsparcie dla ponad 100 różnych metod płatności oraz obsługuje ponad 35 różnych walut. Dzięki temu zapewniamy użytkownikom dużą elastyczność i komfort podczas dokonywania zakupów, niezależnie od ich lokalizacji i preferencji płatniczych."
+                            android:textColor="#AAAAAA"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="87dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:gravity="center_horizontal"
-                android:text="Nieograniczona liczba pobrań i odtworzeń na nawet 4 urządzeniach jednocześnie, w tym możliwość utworzenia 4 profili."
-                android:textAlignment="viewStart"
-                android:textColor="#B8B6B6"
-                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="I wiele, wiele więcej..."
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:visibility="visible"
-                tools:ignore="RtlCompat" />
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Rozwijaj swoje umiejętności, odkrywaj nowe wyzwania i zdobywaj nagrody na każdym kroku. Podbijaj poziomy, zbieraj odznaki za osiągnięcia i spersonalizuj swój profil, aby pokazać swój unikalny styl. Czytaj recenzje, otrzymuj spersonalizowane rekomendacje i ciesz się wyjątkowym doświadczeniem gamingowym, które nigdy się nie nudzi."
+                android:textColor="#AAAAAA"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/corner_login"
+                android:backgroundTint="#6EC8FA"
+                android:fontFamily="@font/aldrich"
+                android:text="Zacznij już dziś!"
+                android:textColor="#15191C"
+                android:textColorHighlight="#6EC8FA"
+                android:textColorLink="#6EC8FA"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:id="@+id/dsw_zacznij" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/corner_login"
+                android:backgroundTint="#252525"
+                android:fontFamily="@font/aldrich"
+                android:text="Z powrotem"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:id="@+id/dsw_powrot" />
+
         </LinearLayout>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/corner_login"
-            android:backgroundTint="#AA1F35"
-            android:fontFamily="@font/aldrich"
-            android:text="Zacznij już dziś!"
-            android:textColor="@color/white"
-            android:textColorHighlight="#AA1F35"
-            android:textColorLink="#AA1F35"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:id="@+id/dsw_zacznij" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/corner_login"
-            android:backgroundTint="#252525"
-            android:fontFamily="@font/aldrich"
-            android:text="Z powrotem"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:id="@+id/dsw_powrot" />
-
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
