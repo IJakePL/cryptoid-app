@@ -45,6 +45,8 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:background="@null"
+                android:tint="#6EC8FA"
+                tools:ignore="UseAppTint"
                 android:contentDescription="przycisk menu"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_1" />
