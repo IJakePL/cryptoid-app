@@ -39,205 +39,227 @@
             tools:ignore="UseAppTint"/>
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="45dp"
-        android:orientation="vertical">
-
-        <View
-            android:id="@+id/separator1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="158dp"
-            android:layout_gravity="center"
-            android:src="@drawable/img" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="NestNet ver. 1.0.6 (testowa)"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Podaj poniżej wymagane wartości."
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <EditText
-            android:id="@+id/email_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/corner"
-            android:backgroundTint="#37A6A6A6"
-            android:hint="E-mail"
-            android:inputType="text"
-            android:padding="12dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/password_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/corner"
-            android:backgroundTint="#37A6A6A6"
-            android:hint="Password"
-            android:inputType="text"
-            android:padding="12dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Nie pamiętasz hasła?"
-            android:textAlignment="textEnd"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/login_press"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/corner_login"
-            android:backgroundTint="#6EC8FA"
-            android:text="ZALOGUJ SIĘ"
-            android:textColor="#15191C"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nie posiadasz jeszcze konta?"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/lg_utworz"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:textStyle="bold"
-                android:text="Utwórz je!"
-                android:textAlignment="center"
-                android:textColor="#6EC8FA"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Za darmo i bezproblemowo. Zapoznaj się z naszymi grami i dołącz do ogromnej społeczności, by cieszyć się rozgrywką w towarzystwie milionów nowych przyjaciół."
-            android:textAlignment="center"
-            android:textColor="#AAAAAA"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:padding="45dp"
+            android:orientation="vertical">
 
-            <View
-                android:id="@+id/separator3"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#6EC8FA"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Strefa informcyjna:"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="NestNet ver. 1.0.6 (testowa)"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Podaj poniżej wymagane wartości."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="E-mail:"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner"
+                android:backgroundTint="#37A6A6A6"
+                android:hint=""
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20dp"
+                tools:ignore="SpeakableTextPresentCheck"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Hasło:"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner"
+                android:backgroundTint="#37A6A6A6"
+                android:hint=""
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nie pamiętasz hasła?"
+                android:textAlignment="textEnd"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/login_press"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corner_login"
+                android:backgroundTint="#6EC8FA"
+                android:text="ZALOGUJ SIĘ"
+                android:textColor="#15191C"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nie posiadasz jeszcze konta?"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/lg_utworz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Utwórz je!"
+                    android:textAlignment="center"
+                    android:textColor="#6EC8FA"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Za darmo i bezproblemowo. Zapoznaj się z naszymi grami i dołącz do ogromnej społeczności, by cieszyć się rozgrywką w towarzystwie milionów nowych przyjaciół."
+                android:textAlignment="center"
+                android:textColor="#AAAAAA"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/separator3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#6EC8FA"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strefa informcyjna:"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <View
+                    android:id="@+id/separator4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#6EC8FA"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pol_pry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1. Zapoznaj się z naszą polityka prywatności."
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/pot_pom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2. Potrzebuję pomocy z logowaniem!"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/dow_nest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="3. Dowiedz się więcej o NestNet."
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="visible" />
 
             <View
-                android:id="@+id/separator4"
+                android:id="@+id/separator2"
                 android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#6EC8FA"/>
+                android:layout_height="0dp"
+                android:layout_weight="1" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/pol_pry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="1. Zapoznaj się z naszą polityka prywatności."
-            android:textAlignment="textStart"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <TextView
-            android:id="@+id/pot_pom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="2. Potrzebuję pomocy z logowaniem!"
-            android:textAlignment="textStart"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <TextView
-            android:id="@+id/dow_nest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="3. Dowiedz się więcej o NestNet."
-            android:textAlignment="textStart"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:visibility="visible" />
-
-        <View
-            android:id="@+id/separator2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

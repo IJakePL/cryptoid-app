@@ -216,7 +216,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Oferuje bogactwo możliwości rywalizacji w różnorodnych grach multiplayer. Niezależnie od tego, czy lubisz strategiczne potyczki, dynamiczne strzelanki czy szybkie rozgrywki, Steam daje ci szansę na stawienie czoła wyzwaniom i zdobycie zwycięstwa."
+                    android:text="Oferuje bogactwo możliwości rywalizacji w różnorodnych grach multiplayer. Niezależnie od tego, czy lubisz strategiczne potyczki, dynamiczne strzelanki czy szybkie rozgrywki, NestNet daje ci szansę na stawienie czoła wyzwaniom i zdobycie zwycięstwa."
                     android:textAlignment="viewStart"
                     android:textColor="#B8B6B6"
                     android:textSize="18sp"
@@ -414,7 +414,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:text="I wiele, wiele więcej..."
                 android:textColor="#fff"
                 android:textSize="20sp"

@@ -46,9 +46,9 @@ class HasloActivity : ComponentActivity() {
             val isEnabled = haslo1.text.isNotBlank() && haslo2.text.isNotBlank()
             button.isEnabled = isEnabled
             button.backgroundTintList = ColorStateList.valueOf(
-                if (isEnabled) Color.parseColor("#AA1F35") else Color.parseColor("#BFBFBF")
+                if (isEnabled) Color.parseColor("#6EC8FA") else Color.parseColor("#7C7C7C")
             )
-            button.setTextColor(if (isEnabled) Color.parseColor("#FFFFFF") else Color.parseColor("#6B6B6B"))
+            button.setTextColor(if (isEnabled) Color.parseColor("#434343") else Color.parseColor("#434343"))
 
             button.setOnClickListener {
                 if (isEnabled) {

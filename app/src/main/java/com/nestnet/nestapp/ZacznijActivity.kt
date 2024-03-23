@@ -43,13 +43,13 @@ class ZacznijActivity : ComponentActivity() {
         fun setButtonState(editText: EditText, button: Button) {
             if (editText.text.toString().isEmpty()) {
                 button.isEnabled = false
-                button.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#BFBFBF"))
-                button.setTextColor(Color.parseColor("#6B6B6B"))
+                button.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#7C7C7C"))
+                button.setTextColor(Color.parseColor("#434343"))
                 button.setOnClickListener(null)
             } else {
                 button.isEnabled = true
-                button.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#AA1F35"))
-                button.setTextColor(Color.parseColor("#FFFFFF"))
+                button.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#6EC8FA"))
+                button.setTextColor(Color.parseColor("#434343"))
                 button.setOnClickListener {
                     register(editText.context, editText.text.toString())
                 }
