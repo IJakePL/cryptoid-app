@@ -1,6 +1,7 @@
 package com.nestnet.nestapp
 
 import android.content.Intent
+import android.content.Context
 import android.os.Bundle
 import android.os.AsyncTask
 import android.widget.Button
@@ -20,6 +21,10 @@ class LoginActivity : ComponentActivity() {
     lateinit var emailInput: EditText
     lateinit var passwordInput: EditText
     lateinit var loginBtn: Button
+
+    var name = ""
+    var plan = ""
+    var userId = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,9 +81,22 @@ class LoginActivity : ComponentActivity() {
                 val responseCode = connection.responseCode
                 if (responseCode == HttpURLConnection.HTTP_OK) {
 
+                    val inputStream = connection.inputStream
+                    val response = inputStream.bufferedReader().use { it.readText() }
+
+                    println("Odpowiedź serwera: $response")
+                    val jsonResponse = JSONObject(response)
+
+                    name = jsonResponse.getString("name")
+                    plan = jsonResponse.getString("plan")
+                    userId = jsonResponse.getString("user_id")
+
                     val jsonObject = JSONObject().apply {
                         put("email", email)
                         put("password", password)
+                        put("name", name)
+                        put("plan", plan)
+                        put("userId", userId)
                     }
 
                     val file = File(filesDir, "user.json")
@@ -104,7 +122,8 @@ class LoginActivity : ComponentActivity() {
                 val intent = Intent(this@LoginActivity, SplashActivity::class.java)
                 startActivity(intent)
             } else {
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                val intent = Intent(this@LoginActivity, LoginActivity::class.java)
+                Toast.makeText(this@LoginActivity, "Napotkaliśmy problem! (ars18)", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
             }
             finish()

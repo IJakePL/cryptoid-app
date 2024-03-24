@@ -402,7 +402,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:gravity="center"
-                            android:text="Nasza sklep wsparcie dla ponad 100 różnych metod płatności oraz obsługuje ponad 35 różnych walut. Dzięki temu zapewniamy użytkownikom dużą elastyczność i komfort podczas dokonywania zakupów, niezależnie od ich lokalizacji i preferencji płatniczych."
+                            android:text="Nasz sklep wspiera ponad 100 różnych metod płatności oraz obsługuje ponad 35 różnych walut. Dzięki temu zapewniamy użytkownikom dużą elastyczność i komfort podczas dokonywania zakupów, niezależnie od ich lokalizacji i preferencji płatniczych."
                             android:textColor="#AAAAAA"
                             android:textSize="15sp" />
 

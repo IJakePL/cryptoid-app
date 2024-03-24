@@ -3,9 +3,11 @@ package com.nestnet.nestapp
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
+import android.os.AsyncTask
 import android.os.Bundle
 import android.widget.Button
 import android.os.Handler
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -13,14 +15,60 @@ import org.json.JSONObject
 import java.io.File
 import java.io.FileWriter
 import com.nestnet.nestapp.utils.CheckNetwork
+import java.io.FileReader
+import java.io.OutputStreamWriter
+import java.net.HttpURLConnection
+import java.net.URL
 
 class HomeActivity : ComponentActivity() {
 
     private var wasConnected = false
 
+    var name = ""
+    var plan = ""
+    var userId = ""
+    var emails = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
+
+        val file = File(this@HomeActivity.filesDir, "user.json")
+
+        if (file.exists()) {
+            try {
+                val fileReader = FileReader(file)
+                val jsonString = fileReader.readText()
+
+                if (jsonString.isNotEmpty()) {
+                    val jsonObject = JSONObject(jsonString)
+                    emails = jsonObject.getString("email")
+                    name = jsonObject.getString("name")
+                    plan = jsonObject.getString("plan")
+                    userId = jsonObject.getString("userId")
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                val intent = Intent(this@HomeActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+
+        val textView1: TextView = findViewById(R.id.podany_email)
+        textView1.text = "EMAIL: " + emails
+
+        // podane haslo
+        val textView2: TextView = findViewById(R.id.podany_plan)
+        textView2.text = "PLAN: " + plan
+
+        // podana nazwa
+        val textView3: TextView = findViewById(R.id.podana_nazwa)
+        textView3.text = "NAZWA: " + name
+
+        // podany user id
+        val textView4: TextView = findViewById(R.id.podane_id)
+        textView4.text = "ID: " + userId
 
         if (wasConnected) {
             wasConnected = CheckNetwork.isWifiConnected(this@HomeActivity)
@@ -28,27 +76,13 @@ class HomeActivity : ComponentActivity() {
 
         wasConnected = CheckNetwork.isWifiConnected(this@HomeActivity)
 
-        // podany email
-        val textView1: TextView = findViewById(R.id.podany_email)
-        val receivedEmail1 = intent.getStringExtra("EMAIL")
-        textView1.text = "EMAIL: " + receivedEmail1
-
-        // podane haslo
-        val textView2: TextView = findViewById(R.id.podany_plan)
-        val receivedEmail2 = intent.getStringExtra("PLAN")
-        textView2.text = "PLAN: " + receivedEmail2
-
-        // podana nazwa
-        val textView3: TextView = findViewById(R.id.podana_nazwa)
-        val receivedEmail3 = intent.getStringExtra("NAME")
-        textView3.text = "NAZWA: " + receivedEmail3
-
-        // podany user id
-        val textView4: TextView = findViewById(R.id.podane_id)
-        val receivedEmail4 = intent.getStringExtra("USERID")
-        textView4.text = "ID: " + receivedEmail4
-
         val logButton: Button = findViewById(R.id.logout)
+        val MenuButton: ImageButton = findViewById(R.id.search)
+
+        MenuButton.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
 
         logButton.setOnClickListener {
             val jsonObject = JSONObject().apply {

@@ -48,7 +48,6 @@ class SplashActivity : AppCompatActivity() {
                         }
                     }, 3000)
                 } else {
-                    // Jeśli plik jest pusty, uruchom MainActivity
                     val intent = Intent(this@SplashActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
@@ -60,10 +59,12 @@ class SplashActivity : AppCompatActivity() {
                 finish()
             }
         } else {
-            // Jeśli plik nie istnieje, utwórz go i uruchom MainActivity
             val jsonObject = JSONObject().apply {
                 put("email", "")
                 put("password", "")
+                put("name", "")
+                put("userId", "")
+                put("plan", "")
             }
 
             try {

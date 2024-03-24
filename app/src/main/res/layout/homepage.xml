@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C1C1A"
+    android:background="#212529"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#171715">
+        android:background="#15191C">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,6 +44,7 @@
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:background="@null"
                 android:tint="#6EC8FA"
                 tools:ignore="UseAppTint"
@@ -73,7 +74,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="#171715">
+        android:background="#15191C">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -217,7 +218,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#171715">
+        android:background="#15191C">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -255,7 +256,7 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/film"
+                android:src="@drawable/card"
                 android:tint="#838181"
                 tools:ignore="UseAppTint" />
 
@@ -274,7 +275,7 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/tv_retro"
+                android:src="@drawable/cloud"
                 android:tint="#838181"
                 tools:ignore="UseAppTint" />
 
@@ -293,7 +294,7 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cloud"
+                android:src="@drawable/bell"
                 android:tint="#838181"
                 tools:ignore="UseAppTint" />
 

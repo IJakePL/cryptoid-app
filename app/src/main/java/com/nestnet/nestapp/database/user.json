@@ -1,4 +1,7 @@
 {
   "email": "",
-  "password": ""
+  "password": "",
+  "name": "",
+  "userId": "",
+  "plan": ""
 }
