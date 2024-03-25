@@ -24,17 +24,14 @@ class PotwierdzActivity : ComponentActivity() {
         val dswButton: ImageButton = findViewById(R.id.zjt_back)
         val logButton: Button = findViewById(R.id.zacznij_kont)
 
-        // podany email
         val textView1: TextView = findViewById(R.id.podany_email)
         val receivedEmail1 = intent.getStringExtra("EMAIL")
         textView1.text = receivedEmail1
 
-        // podane haslo
         val textView2: TextView = findViewById(R.id.podane_haslo)
         val receivedEmail2 = intent.getStringExtra("HASŁO")
         textView2.text = receivedEmail2
 
-        // podane nazwa
         val textView3: TextView = findViewById(R.id.podana_nazwa)
         val receivedEmail3 = intent.getStringExtra("NAZWA")
         textView3.text = receivedEmail3

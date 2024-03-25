@@ -19,6 +19,18 @@ class SplashActivity : AppCompatActivity() {
     var plan = ""
     var userId = ""
     var emails = ""
+    var push = ""
+    var website = ""
+    var language = ""
+    var chat = ""
+    var motyw = ""
+    var invite = ""
+    var connect_account = ""
+    var centrum_rodzinne = ""
+    var synchro = ""
+    var dm_allow = ""
+    var dm_unread = ""
+    var dm_none = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +77,18 @@ class SplashActivity : AppCompatActivity() {
                 put("name", "")
                 put("userId", "")
                 put("plan", "")
+                put("website", "")
+                put("language", "")
+                put("chat", "")
+                put("motyw", "")
+                put("invite", "")
+                put("connect_account", "")
+                put("centrum_rodzinne", "")
+                put("push", "")
+                put("synchro", "")
+                put("dm_allow", "")
+                put("dm_unread", "")
+                put("dm_none", "")
             }
 
             try {
@@ -117,6 +141,44 @@ class SplashActivity : AppCompatActivity() {
                     plan = jsonResponse.getString("plan")
                     userId = jsonResponse.getString("user_id")
                     emails = jsonResponse.getString("email")
+                    push = jsonResponse.getString("push")
+                    website = jsonResponse.getString("website")
+                    language = jsonResponse.getString("language")
+                    chat = jsonResponse.getString("chat")
+                    motyw = jsonResponse.getString("motyw")
+                    invite = jsonResponse.getString("invite")
+                    connect_account = jsonResponse.getString("connect_account")
+                    centrum_rodzinne = jsonResponse.getString("centrum_rodzinne")
+                    synchro = jsonResponse.getString("synchro")
+                    dm_allow = jsonResponse.getString("dm_allow")
+                    dm_unread = jsonResponse.getString("dm_unread")
+                    dm_none = jsonResponse.getString("dm_none")
+
+                    val jsonObject = JSONObject().apply {
+                        put("email", email)
+                        put("password", password)
+                        put("name", name)
+                        put("plan", plan)
+                        put("userId", userId)
+                        put("push", push)
+                        put("website", website)
+                        put("language", language)
+                        put("chat", chat)
+                        put("motyw", motyw)
+                        put("invite", invite)
+                        put("connect_account", connect_account)
+                        put("centrum_rodzinne", centrum_rodzinne)
+                        put("synchro", synchro)
+                        put("dm_allow", dm_allow)
+                        put("dm_unread", dm_unread)
+                        put("dm_none", dm_none)
+                    }
+
+                    val file = File(filesDir, "user.json")
+                    val fileWriter = FileWriter(file)
+                    fileWriter.use {
+                        it.write(jsonObject.toString())
+                    }
 
                     return true
                 } else if (responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
@@ -133,15 +195,11 @@ class SplashActivity : AppCompatActivity() {
         override fun onPostExecute(result: Boolean) {
             if (result) {
                 val intent = Intent(this@SplashActivity, HomeActivity::class.java)
-
-                intent.putExtra("EMAIL", emails)
-                intent.putExtra("USERID", userId)
-                intent.putExtra("PLAN", plan)
-                intent.putExtra("NAME", name)
-
+                finish()
                 startActivity(intent)
             } else {
                 val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                finish()
                 startActivity(intent)
             }
             finish()

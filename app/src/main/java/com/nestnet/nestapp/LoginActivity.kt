@@ -25,12 +25,24 @@ class LoginActivity : ComponentActivity() {
     var name = ""
     var plan = ""
     var userId = ""
+    var emails = ""
+    var push = ""
+    var website = ""
+    var language = ""
+    var chat = ""
+    var motyw = ""
+    var invite = ""
+    var connect_account = ""
+    var centrum_rodzinne = ""
+    var synchro = ""
+    var dm_allow = ""
+    var dm_unread = ""
+    var dm_none = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.logowanie)
 
-        // click
         val powrotButton: ImageButton = findViewById(R.id.lg_back)
 
         powrotButton.setOnClickListener {
@@ -38,7 +50,6 @@ class LoginActivity : ComponentActivity() {
             startActivity(intent)
         }
 
-        // input
         emailInput = findViewById(R.id.email_input)
         passwordInput = findViewById(R.id.password_input)
         loginBtn = findViewById(R.id.login_press)
@@ -90,6 +101,19 @@ class LoginActivity : ComponentActivity() {
                     name = jsonResponse.getString("name")
                     plan = jsonResponse.getString("plan")
                     userId = jsonResponse.getString("user_id")
+                    emails = jsonResponse.getString("email")
+                    push = jsonResponse.getString("push")
+                    website = jsonResponse.getString("website")
+                    language = jsonResponse.getString("language")
+                    chat = jsonResponse.getString("chat")
+                    motyw = jsonResponse.getString("motyw")
+                    invite = jsonResponse.getString("invite")
+                    connect_account = jsonResponse.getString("connect_account")
+                    centrum_rodzinne = jsonResponse.getString("centrum_rodzinne")
+                    synchro = jsonResponse.getString("synchro")
+                    dm_allow = jsonResponse.getString("dm_allow")
+                    dm_unread = jsonResponse.getString("dm_unread")
+                    dm_none = jsonResponse.getString("dm_none")
 
                     val jsonObject = JSONObject().apply {
                         put("email", email)
@@ -97,6 +121,18 @@ class LoginActivity : ComponentActivity() {
                         put("name", name)
                         put("plan", plan)
                         put("userId", userId)
+                        put("push", push)
+                        put("website", website)
+                        put("language", language)
+                        put("chat", chat)
+                        put("motyw", motyw)
+                        put("invite", invite)
+                        put("connect_account", connect_account)
+                        put("centrum_rodzinne", centrum_rodzinne)
+                        put("synchro", synchro)
+                        put("dm_allow", dm_allow)
+                        put("dm_unread", dm_unread)
+                        put("dm_none", dm_none)
                     }
 
                     val file = File(filesDir, "user.json")

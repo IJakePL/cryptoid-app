@@ -58,15 +58,12 @@ class HomeActivity : ComponentActivity() {
         val textView1: TextView = findViewById(R.id.podany_email)
         textView1.text = "EMAIL: " + emails
 
-        // podane haslo
         val textView2: TextView = findViewById(R.id.podany_plan)
         textView2.text = "PLAN: " + plan
 
-        // podana nazwa
         val textView3: TextView = findViewById(R.id.podana_nazwa)
         textView3.text = "NAZWA: " + name
 
-        // podany user id
         val textView4: TextView = findViewById(R.id.podane_id)
         textView4.text = "ID: " + userId
 

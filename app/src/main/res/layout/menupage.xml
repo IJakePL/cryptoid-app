@@ -69,82 +69,6 @@
         </LinearLayout>
     </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#15191C">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="start|center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp">
-
-            <View
-                android:id="@+id/separator19"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="MENU"
-                android:textAlignment="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="ZAPOWIEDZI"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="SPOŁECZNOŚĆ"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="PORTFEL"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                android:visibility="visible" />
-
-            <View
-                android:id="@+id/separator20"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-    </FrameLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -517,6 +441,35 @@
                     android:layout_height="54dp"
                     android:gravity="center_vertical"
                     android:text="Kontakt"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corner_menu"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wrench_simple"
+                    android:tint="#DFE3E6"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:text="Twórcy"
                     android:textColor="#DFE3E6"
                     android:textStyle="bold"
                     android:textSize="20sp"

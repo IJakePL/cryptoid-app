@@ -3,5 +3,17 @@
   "password": "",
   "name": "",
   "userId": "",
-  "plan": ""
+  "plan": "",
+  "website": "",
+  "language": "",
+  "chat": "",
+  "motyw": "",
+  "invite": "",
+  "connect_account": "",
+  "centrum_rodzinne": "",
+  "push": "",
+  "synchro": "",
+  "dm_allow": "",
+  "dm_unread": "",
+  "dm_none": ""
 }
