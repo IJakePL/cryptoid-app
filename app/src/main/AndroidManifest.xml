@@ -37,6 +37,12 @@
 
         <activity android:name=".MenuActivity"/>
 
+        <activity android:name=".TworcyActivity"/>
+
+        <activity android:name=".KontaktActivity"/>
+
+        <activity android:name=".KontoActivity"/>
+
         <activity android:name=".UstawieniaActivity"/>
 
         <activity android:name=".HasloActivity"/>

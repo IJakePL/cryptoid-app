@@ -15,6 +15,8 @@ class MenuActivity : ComponentActivity() {
 
         val MenuButton: ImageButton = findViewById(R.id.home_button1)
         val Ustawienia: LinearLayout = findViewById(R.id.ustawienia)
+        val Tworcy: LinearLayout = findViewById(R.id.tworcy)
+        val Kontakt: LinearLayout = findViewById(R.id.kontakt)
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
@@ -23,6 +25,16 @@ class MenuActivity : ComponentActivity() {
 
         Ustawienia.setOnClickListener {
             val intent = Intent(this, UstawieniaActivity::class.java)
+            startActivity(intent)
+        }
+
+        Tworcy.setOnClickListener {
+            val intent = Intent(this, TworcyActivity::class.java)
+            startActivity(intent)
+        }
+
+        Kontakt.setOnClickListener {
+            val intent = Intent(this, KontaktActivity::class.java)
             startActivity(intent)
         }
 

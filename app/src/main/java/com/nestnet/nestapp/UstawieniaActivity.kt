@@ -3,6 +3,7 @@ package com.nestnet.nestapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import org.json.JSONObject
@@ -81,7 +82,7 @@ class UstawieniaActivity : ComponentActivity() {
         val MenuButton: ImageButton = findViewById(R.id.home_button1)
 
         MenuButton.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
@@ -89,6 +90,13 @@ class UstawieniaActivity : ComponentActivity() {
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        val KontoButton: LinearLayout = findViewById(R.id.konto)
+
+        KontoButton.setOnClickListener {
+            val intent = Intent(this, KontoActivity::class.java)
             startActivity(intent)
         }
     }
