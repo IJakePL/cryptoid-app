@@ -1,6 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#2B2F33">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/home_button1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/angle_left"
+                    app:tint="#9597A2" />
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_7" />
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Nickname"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="#DFE3E6"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/angle_right"
+                    app:tint="#9597A2" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageButton
+                    android:id="@+id/call"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/corner_level"
+                    android:backgroundTint="#212529"
+                    android:contentDescription="przycisk menu"
+                    android:padding="11dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/phone_call"
+                    app:tint="#9597A2" />
+
+                <ImageButton
+                    android:id="@+id/video"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/corner_level"
+                    android:backgroundTint="#212529"
+                    android:contentDescription="przycisk menu"
+                    android:padding="11dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/video_camera"
+                    app:tint="#9597A2" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#272A2C"
+        android:layout_above="@+id/messageLayout"
+        android:layout_below="@+id/bar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2B2F33"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/buttonPlus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/plus"
+            android:scaleType="fitCenter"
+            app:tint="#C7C8CD"
+            android:background="@drawable/corner_level"
+            android:contentDescription="przycisk menu"
+            android:backgroundTint="#212529"
+            android:padding="12dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageButton
+            android:id="@+id/buttonGift"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/gift"
+            android:scaleType="fitCenter"
+            app:tint="#C7C8CD"
+            android:background="@drawable/corner_level"
+            android:contentDescription="przycisk menu"
+            android:backgroundTint="#212529"
+            android:padding="12dp"
+            android:layout_marginEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:textColor="#9597A2"
+            android:backgroundTint="#212529"
+            android:background="@drawable/corner_message"
+            android:hint="Napisz do username"
+            android:textColorHint="#9597A2"
+            android:maxLines="4"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/send"
+            android:scaleType="fitCenter"
+            app:tint="#C7C8CD"
+            android:background="@drawable/corner_level"
+            android:contentDescription="przycisk menu"
+            android:backgroundTint="#212529"
+            android:padding="12dp"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

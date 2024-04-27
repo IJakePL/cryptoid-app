@@ -12,7 +12,6 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.welcome)
 
         val rozpocznijButton: Button = findViewById(R.id.wel_rozpocznij)
-        val dswButton: Button = findViewById(R.id.wel_dsw)
         val logButton: TextView = findViewById(R.id.wel_logowanie)
 
         rozpocznijButton.setOnClickListener {
@@ -22,11 +21,6 @@ class MainActivity : ComponentActivity() {
 
         logButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-
-        dswButton.setOnClickListener {
-            val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
     }

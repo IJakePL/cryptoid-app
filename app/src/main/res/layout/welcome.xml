@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#15191C"
+    android:background="#f5f6f4"
     android:orientation="vertical">
 
     <LinearLayout
@@ -15,49 +15,27 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/corner_wel"
-            android:backgroundTint="#212529"
             android:scaleType="fitCenter"
-            android:src="@drawable/background_nestnet"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:gravity="start|center_vertical"
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/welcome_button1"
-                    android:layout_width="130dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/lg_back"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
                     android:background="@null"
-                    android:tint="#6EC8FA"
-                    tools:ignore="UseAppTint"
                     android:contentDescription="przycisk menu"
+                    android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/img_1" />
-
-                <View
-                    android:id="@+id/separator1"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ZALOGUJ SIE"
-                    android:textAlignment="center"
-                    android:textColor="#DAD9D9"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:padding="5dp"
-                    android:layout_marginRight="12dp"
-                    android:visibility="visible"
-                    android:id="@+id/wel_logowanie" />
+                    android:src="@drawable/angle_left"
+                    android:tint="#959595"
+                    tools:ignore="UseAppTint" />
             </LinearLayout>
 
             <LinearLayout
@@ -66,6 +44,32 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Welcome to Cryptoid"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textColor="#808080"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start exploring the crypto world eight now. it's simple and secure with our app."
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textColor="#959595"
+                    android:textSize="17sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
                 <View
                     android:id="@+id/separator2"
                     android:layout_width="0dp"
@@ -73,81 +77,89 @@
                     android:layout_weight="1" />
 
                 <ImageButton
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="275dp"
+                    android:layout_height="275dp"
                     android:layout_gravity="center"
-                    android:padding="40dp"
-                    android:background="@drawable/corner_prf"
-                    android:backgroundTint="#6EC8FA"
-                    android:tint="#15191C"
+                    android:background="@null"
                     tools:ignore="UseAppTint"
                     android:contentDescription="przycisk menu"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rocket_lunch" />
+                    android:src="@drawable/img_19" />
 
                 <View
                     android:id="@+id/separator3"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Witaj w nowym wymiarze rozrywki! Znajdziesz tu najnowsze gry i aplikacje, które zapewnią Ci niezapomnianą rozrywkę! Czas na przygodę!"
-                    android:textAlignment="center"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginLeft="25dp"
-                    android:textColor="#DAD9D9"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:visibility="visible"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Oglądaj live i graj gdzie chcesz, kiedy chcesz. Anuluj w dowolnym momencie. Swoboda i wygoda na wyciągnięcie ręki!"
-                    android:textAlignment="center"
-                    android:layout_margin="40dp"
-                    android:textColor="#B8B6B6"
-                    android:textSize="19sp"
-                    android:layout_marginBottom="40dp"
-                    android:visibility="visible"/>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:backgroundTint="#E1E1E0"
+            android:background="@drawable/corner_dsww"
             android:padding="20dp">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/corner_login"
-                android:backgroundTint="#6EC8FA"
-                android:fontFamily="@font/aldrich"
-                android:text="Rozpocznij przygodę"
-                android:textColor="#15191C"
-                android:textSize="17sp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy way to manage your Cryptoid"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="#808080"
+                android:textSize="32sp"
+                android:layout_margin="10dp"
                 android:textStyle="bold"
-                android:id="@+id/wel_rozpocznij"/>
+                android:padding="5dp"
+                android:visibility="visible" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/corner_login"
-                android:backgroundTint="#252525"
-                android:fontFamily="@font/aldrich"
-                android:text="Dowiedz się więcej"
-                android:textColor="@color/white"
-                android:textSize="17sp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy, sell and manage hundreds of cryptocurrencies easily and securely."
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="#959595"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:id="@+id/wel_dsw"/>
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner_dsww"
+                    android:backgroundTint="#f5f6f4"
+                    android:text="Create a wallet"
+                    android:textColor="#959595"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:id="@+id/wel_rozpocznij"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner_dsww"
+                    android:backgroundTint="#f5f6f4"
+                    android:text="login to wallet"
+                    android:textColor="#959595"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:id="@+id/wel_logowanie"/>
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>

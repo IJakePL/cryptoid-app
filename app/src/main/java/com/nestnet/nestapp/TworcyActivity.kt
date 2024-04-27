@@ -18,7 +18,7 @@ class TworcyActivity : AppCompatActivity() {
         val MenuButton: ImageButton = findViewById(R.id.home_button1)
 
         MenuButton.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, OnasActivity::class.java)
             startActivity(intent)
         }
 

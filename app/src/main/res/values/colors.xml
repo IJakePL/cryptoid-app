@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="enabled">#ffffff</color>
+    <color name="disabled">#C7C8CD</color>
+    <color name="backenabled">#5865F2</color>
+    <color name="backdisabled">#1C1D22</color>
+    <color name="rippleColor">#FFFFFF</color>
+    <color name="colorTextMessage">#9597A2</color>
+    <color name="backgroundting">#212529</color>
+    <color name="colortextgroupname">#DFE3E6</color>
+    <color name="group_mem">#22A458</color>
+    <color name="group_onl">#C4C9CE</color>
+    <color name="group_social">#8F949A</color>
+    <color name="group_private">#5865F2</color>
 </resources>

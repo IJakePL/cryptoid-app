@@ -3,6 +3,7 @@ package com.nestnet.nestapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONObject
@@ -53,7 +54,28 @@ class ProfileActivity : AppCompatActivity() {
         val MenuButton: ImageButton = findViewById(R.id.home_button1)
 
         MenuButton.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        val GroupButton: LinearLayout = findViewById(R.id.group)
+
+        GroupButton.setOnClickListener {
+            val intent = Intent(this, YourGroupActivity::class.java)
+            startActivity(intent)
+        }
+
+        val SaldoButton: LinearLayout = findViewById(R.id.saldo)
+
+        SaldoButton.setOnClickListener {
+            val intent = Intent(this, PortfelActivity::class.java)
+            startActivity(intent)
+        }
+
+        val OdznakiButton: LinearLayout = findViewById(R.id.odznaki)
+
+        OdznakiButton.setOnClickListener {
+            val intent = Intent(this, OdznakiActivity::class.java)
             startActivity(intent)
         }
 

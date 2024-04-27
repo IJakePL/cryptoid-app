@@ -8,64 +8,43 @@
     android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/bossbar1"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#15191C">
+        android:layout_height="55dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="start|center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/home_button1"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@null"
                 android:contentDescription="przycisk menu"
-                android:padding="12dp"
+                android:padding="11dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/angle_left"
                 android:tint="#fff"
                 tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="KONTAKT"
+                android:textColor="#DFE3E6"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="visible" />
 
             <View
                 android:id="@+id/separator1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="KONTAKT"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-            <View
-                android:id="@+id/separator2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/home_button3"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:background="@drawable/prof_1"
-                android:contentDescription="przycisk logowanie"
-                android:padding="12dp"
-                android:tint="#fff"
-                tools:ignore="UseAppTint" />
         </LinearLayout>
     </FrameLayout>
 
@@ -84,24 +63,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:text="Nasze emaile kontaktowe"
                     android:textColor="#DFE3E6"
+                    android:gravity="center_vertical"
                     android:textStyle="bold"
                     android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
                     android:visibility="visible" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
+                    android:background="@drawable/corner_menu_lol"
+                    android:backgroundTint="#212529"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -146,7 +129,8 @@
                             android:textColor="#878787"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:textIsSelectable="true"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -190,7 +174,8 @@
                             android:textColor="#878787"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:textIsSelectable="true"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -198,24 +183,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:text="Nasze social media"
                     android:textColor="#DFE3E6"
+                    android:gravity="center_vertical"
                     android:textStyle="bold"
                     android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
                     android:visibility="visible" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
+                    android:background="@drawable/corner_menu_lol"
+                    android:backgroundTint="#212529"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -260,7 +249,8 @@
                             android:textColor="#878787"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:textIsSelectable="true"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -305,7 +295,8 @@
                             android:textColor="#878787"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:textIsSelectable="true"/>
 
                     </LinearLayout>
 
@@ -351,7 +342,8 @@
                             android:textColor="#878787"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:textIsSelectable="true"/>
 
                     </LinearLayout>
 
@@ -396,7 +388,9 @@
                             android:textColor="#878787"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:textIsSelectable="true"
+                            />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -404,9 +398,13 @@
     </ScrollView>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#15191C">
+        android:id="@+id/bossbar3"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#15191C"
+        android:background="@drawable/corner_dsww">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -417,25 +415,6 @@
             android:paddingEnd="12dp">
 
             <ImageButton
-                android:id="@+id/home"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:background="@null"
-                android:contentDescription="przycisk menu"
-                android:padding="12dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/home"
-                android:tint="#838181"
-                tools:ignore="UseAppTint" />
-
-            <View
-                android:id="@+id/separator10"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
                 android:id="@+id/film"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -444,8 +423,8 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/card"
-                android:tint="#838181"
+                android:src="@drawable/search"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
 
             <View
@@ -463,18 +442,18 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cloud"
-                android:tint="#838181"
+                android:src="@drawable/gamepad"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
 
             <View
-                android:id="@+id/separator13"
+                android:id="@+id/separator10"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/cloud"
+                android:id="@+id/home"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -482,8 +461,8 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/bell"
-                android:tint="#838181"
+                android:src="@drawable/home"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
 
             <View
@@ -493,7 +472,25 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/search"
+                android:id="@+id/chat"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/comment_alt"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/menu"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -502,7 +499,7 @@
                 android:padding="12dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/menu_bars"
-                android:tint="#6EC8FA"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
         </LinearLayout>
     </FrameLayout>

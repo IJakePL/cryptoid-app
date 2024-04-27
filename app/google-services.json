@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "982844793901",
+    "project_id": "nestnet-35cd1",
+    "storage_bucket": "nestnet-35cd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982844793901:android:64579b7d96b3815b4244a4",
+        "android_client_info": {
+          "package_name": "com.nestnet.nestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlqIXdwmgnRt95_OY3KghQEhvJAfdFOwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

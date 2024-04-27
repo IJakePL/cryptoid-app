@@ -1,6 +1,638 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212529"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/bossbar1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/home_button1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="11dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/angle_left"
+                android:tint="#fff"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="O NAS"
+                android:textColor="#DFE3E6"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_below="@+id/bossbar1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="➜ MISJA:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/corner_ust"
+                    android:backgroundTint="#2B2F33"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="W NestNet, nasza misja to coś więcej niż po prostu tworzenie gier i aplikacji - to manifestacja naszych najgłębszych wartości i aspiracji. Naszym głównym celem jest budowanie globalnej społeczności, która dzieli pasję do innowacji i rozwoju technologicznego. Pragniemy stworzyć przestrzeń, w której każdy użytkownik może znaleźć inspirację, rozrywkę i możliwość rozwijania swoich zainteresowań. Poprzez nasze produkty, dążymy do wykreowania otwartego, wspierającego środowiska, które promuje kreatywność, współpracę i wzajemne zrozumienie. Jesteśmy przekonani, że nasza misja ma potencjał zmienić sposób, w jaki ludzie postrzegają technologię i jej wpływ na życie codzienne."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ HISTORIA:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="Nasza historia zaczęła się od marzeń i pasji kilku osób, które postanowiły zmienić sposób, w jaki ludzie postrzegają rozrywkę w świecie cyfrowym. Od pierwszych koncepcji po obecne osiągnięcia, pokonaliśmy wiele przeszkód i wyzwań, zdobywając doświadczenie i wiedzę, które pozwoliły nam stać się liderem w branży. Nasza historia to opowieść o ciągłym dążeniu do doskonałości, niezależnie od trudności napotkanych po drodze. Dzięki każdemu wyzwaniu i sukcesowi staliśmy się silniejsi i bardziej zdeterminowani niż kiedykolwiek wcześniej."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ CELE:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="Nasze cele są ambitne, ale osiągalne dzięki naszej determinacji i zaangażowaniu. Pragniemy być prekursorami w branży, nie tylko pod względem technologicznym, ale także pod względem społecznym i kulturowym. Chcemy tworzyć produkty, które nie tylko dostarczają rozrywki, ale także inspirują, uczą i angażują użytkowników na całym świecie. Naszym marzeniem jest stworzenie trwałego dziedzictwa, które przetrwa próbę czasu i będzie miało pozytywny wpływ na społeczność. Dążymy do ciągłego doskonalenia naszych umiejętności i zdobywania nowych kompetencji, aby być zawsze na czele technologicznych nowinek."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ GŁÓWNE PROJEKTY:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="W naszym portfolio znajdują się różnorodne projekty, które odzwierciedlają naszą różnorodność, kreatywność i pasję do tworzenia. Od ekscytujących gier akcji po edukacyjne aplikacje, każdy nasz projekt jest starannie zaprojektowany i dopracowany, aby zapewnić użytkownikom niezapomniane doświadczenia. Nieustannie poszukujemy nowych pomysłów i inspiracji, aby nasze produkty były zawsze na czasie i atrakcyjne dla naszej społeczności. Jesteśmy dumni z różnorodności naszych projektów, które odzwierciedlają nasze zainteresowania i pasje."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ TECHNOLOGIA:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="W NestNet stosujemy najnowsze osiągnięcia technologiczne, aby zapewnić naszym graczom najwyższą jakość i wydajność. Nasze produkty są oparte na zaawansowanych silnikach graficznych i innowacyjnych rozwiązaniach programistycznych, które pozwalają nam osiągać imponujące efekty wizualne i mechaniczne. Dążymy do tego, aby nasze gry i aplikacje były nie tylko atrakcyjne wizualnie, ale także miały płynną rozgrywkę i intuicyjny interfejs użytkownika. Jesteśmy na bieżąco z najnowszymi trendami i technologiami, aby nasze produkty były zawsze na czele innowacji."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ ZESPÓŁ:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="Nasz zespół składa się z utalentowanych profesjonalistów, których pasja do tworzenia gier i aplikacji jest niezwykle inspirująca. Każdy członek naszego zespołu ma unikalne umiejętności i doświadczenie, które przyczyniają się do sukcesu naszych projektów. Współpraca i wspólna praca są kluczowe dla naszej kreatywności i innowacyjności, dlatego też stawiamy na otwartą komunikację i szacunek dla różnorodności poglądów. Nasz zespół jest naszą największą siłą, dlatego też dbamy o to, aby każdy członek czuł się doceniony i zmotywowany do osiągania najwyższych standardów."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ KREATYWNOŚĆ:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="W NestNet kreatywność jest nieodłączną częścią naszej kultury organizacyjnej. Zachęcamy naszych pracowników do myślenia poza schematami, eksperymentowania z nowymi pomysłami i szukania inspiracji w najmniej oczywistych miejscach. Wierzymy, że to właśnie dzięki kreatywności możemy tworzyć produkty, które są wyjątkowe, innowacyjne i porywające dla naszej społeczności. Dążymy do tego, aby nasze gry i aplikacje były nie tylko technologicznie zaawansowane, ale także miały oryginalny design i ciekawą fabułę. Jesteśmy otwarci na nowe pomysły i sugestie, które mogą przyczynić się do rozwoju naszych projektów."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ WSPÓŁPRACA:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="W NestNet wierzymy w siłę współpracy i partnerstwa. Staramy się budować trwałe relacje zarówno z innymi firmami, jak i społecznością graczy, aby wspólnie tworzyć lepsze produkty i rozwiązania. Otwarta komunikacja, wzajemne zrozumienie i szacunek dla różnorodności są fundamentami naszych relacji biznesowych i społecznych. Jesteśmy otwarci na współpracę z innymi twórcami, którzy podzielają nasze wartości i aspiracje. Wierzymy, że dzięki partnerstwu możemy osiągnąć więcej i przyczynić się do rozwoju branży gier i aplikacji."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ SPOŁECZNOŚĆ:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="Społeczność graczy ma dla nas ogromne znaczenie, dlatego też stawiamy na budowanie trwałych więzi i zaangażowanie naszych użytkowników w proces tworzenia i rozwijania naszych produktów. Nasłuchujemy ich opinii, reagujemy na ich potrzeby i starannie analizujemy ich feedback, aby nasze produkty były zawsze dopasowane do ich oczekiwań i preferencji. Naszym celem jest budowanie społeczności opartej na wzajemnym zaufaniu, współpracy i szacunku dla różnorodności. Jesteśmy świadomi odpowiedzialności, jaką mamy wobec naszych użytkowników, dlatego też staramy się dostarczać im produkty, które nie tylko dostarczają rozrywki, ale także mają pozytywny wpływ na ich życie."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="➜ ZRÓWNOWAŻONY ROZWÓJ:"
+                    android:textColor="#DFE3E6"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_menu_lol"
+                        android:backgroundTint="#212529"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="Jesteśmy świadomi naszego wpływu na środowisko i społeczeństwo, dlatego też podejmujemy działania mające na celu minimalizowanie negatywnych skutków naszej działalności. Naszym celem jest dążenie do zrównoważonego rozwoju, zarówno pod względem społecznym, jak i środowiskowym. Dążymy do tego, aby nasze produkty były nie tylko wyjątkowe pod względem rozrywkowym, ale także miały pozytywny wpływ na społeczność i otaczający nas świat. Przywiązujemy dużą wagę do etycznych standardów działania, dbając o uczciwe praktyki biznesowe i społeczną odpowiedzialność. Nasze decyzje podejmujemy z myślą o długoterminowym wpływie na otoczenie oraz dobro naszych użytkowników i pracowników."
+                            android:textColor="#878787"
+                            android:textSize="15sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/bossbar3"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#15191C"
+        android:background="@drawable/corner_dsww">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/film"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator11"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/tv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gamepad"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/home"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:id="@+id/separator14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/chat"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/comment_alt"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/menu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_bars"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

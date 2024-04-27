@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "nestapp"
+rootProject.name = "Cryptoid"
 include(":app")

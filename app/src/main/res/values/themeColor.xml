@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="bodyDark">#141318</color>
+    <color name="bossbarDark">#2D2D35</color>
+    <color name="iconDark">#8C8C8C</color>
+    <color name="textDark">#9597A2</color>
+    <color name="selectorDark">#1C1D22</color>
+
+    <color name="bodyLight">#FFFFFF</color>
+    <color name="bossbarLight">#F2F3F5</color>
+    <color name="iconLight">#A1A2A7</color>
+    <color name="textLight">#606368</color>
+    <color name="selectorLight">#ECEDEF</color>
 </resources>

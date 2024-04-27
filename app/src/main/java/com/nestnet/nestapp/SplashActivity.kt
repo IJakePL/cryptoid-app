@@ -1,10 +1,18 @@
 package com.nestnet.nestapp
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.AsyncTask
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import org.json.JSONObject
 import java.io.File
 import java.io.FileReader
@@ -19,6 +27,7 @@ class SplashActivity : AppCompatActivity() {
     var plan = ""
     var userId = ""
     var emails = ""
+    var email_verify = ""
     var push = ""
     var website = ""
     var language = ""
@@ -31,10 +40,27 @@ class SplashActivity : AppCompatActivity() {
     var dm_allow = ""
     var dm_unread = ""
     var dm_none = ""
+    var friends_number = ""
+    var game_number = ""
+    var money_number = ""
+    var id_notify = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        var TAG = "FCM notification"
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            val token = task.result
+            id_notify = token
+            Log.d(TAG, token)
+        })
 
         supportActionBar?.hide()
 
@@ -73,8 +99,10 @@ class SplashActivity : AppCompatActivity() {
         } else {
             val jsonObject = JSONObject().apply {
                 put("email", "")
+                put("email_verify", "")
                 put("password", "")
                 put("name", "")
+                put("referral", "")
                 put("userId", "")
                 put("plan", "")
                 put("website", "")
@@ -89,6 +117,9 @@ class SplashActivity : AppCompatActivity() {
                 put("dm_allow", "")
                 put("dm_unread", "")
                 put("dm_none", "")
+                put("friends_number", "")
+                put("money_number", "")
+                put("game_number", "")
             }
 
             try {
@@ -134,13 +165,13 @@ class SplashActivity : AppCompatActivity() {
                     val inputStream = connection.inputStream
                     val response = inputStream.bufferedReader().use { it.readText() }
 
-                    println("Odpowiedź serwera: $response")
                     val jsonResponse = JSONObject(response)
 
                     name = jsonResponse.getString("name")
                     plan = jsonResponse.getString("plan")
                     userId = jsonResponse.getString("user_id")
                     emails = jsonResponse.getString("email")
+                    email_verify = jsonResponse.getString("email_verify")
                     push = jsonResponse.getString("push")
                     website = jsonResponse.getString("website")
                     language = jsonResponse.getString("language")
@@ -153,10 +184,14 @@ class SplashActivity : AppCompatActivity() {
                     dm_allow = jsonResponse.getString("dm_allow")
                     dm_unread = jsonResponse.getString("dm_unread")
                     dm_none = jsonResponse.getString("dm_none")
+                    friends_number = jsonResponse.getString("friends")
+                    money_number = jsonResponse.getString("money")
+                    game_number = jsonResponse.getString("game")
 
                     val jsonObject = JSONObject().apply {
                         put("email", email)
                         put("password", password)
+                        put("email_verify", email_verify)
                         put("name", name)
                         put("plan", plan)
                         put("userId", userId)
@@ -172,6 +207,10 @@ class SplashActivity : AppCompatActivity() {
                         put("dm_allow", dm_allow)
                         put("dm_unread", dm_unread)
                         put("dm_none", dm_none)
+                        put("friends_number", friends_number)
+                        put("money_number", money_number)
+                        put("game_number", game_number)
+                        put("id_notify", id_notify)
                     }
 
                     val file = File(filesDir, "user.json")

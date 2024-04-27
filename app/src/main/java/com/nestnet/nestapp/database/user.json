@@ -1,6 +1,8 @@
 {
   "email": "",
+  "email_verify": "",
   "password": "",
+  "referral": "",
   "name": "",
   "userId": "",
   "plan": "",
@@ -15,5 +17,9 @@
   "synchro": "",
   "dm_allow": "",
   "dm_unread": "",
-  "dm_none": ""
+  "dm_none": "",
+  "friends_number": "",
+  "game_number": "",
+  "money_number": "",
+  "id_notify": ""
 }

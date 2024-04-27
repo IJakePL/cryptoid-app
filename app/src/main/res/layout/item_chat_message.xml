@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#272A2C"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Your message layout -->
+    <LinearLayout
+        android:id="@+id/layoutYourMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutYourMessageContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_chat_message_right"
+                android:backgroundTint="#FFFFFF"
+                android:padding="10dp"
+                android:layout_gravity="end"
+                android:textColor="#8682A5"
+                android:textIsSelectable="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11dp"
+            android:textColor="#747780" />
+    </LinearLayout>
+
+    <!-- Other user's message layout -->
+    <LinearLayout
+        android:id="@+id/layoutOtherUserMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutOtherUserMessageContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewMessageOtherUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_chat_message_left"
+                android:backgroundTint="#7B70EE"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textIsSelectable="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDateOther"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11dp"
+            android:textColor="#747780" />
+    </LinearLayout>
+</LinearLayout>

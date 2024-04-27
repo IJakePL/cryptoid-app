@@ -7,6 +7,7 @@ import android.os.AsyncTask
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import org.json.JSONObject
@@ -26,8 +27,10 @@ class LoginActivity : ComponentActivity() {
     var plan = ""
     var userId = ""
     var emails = ""
+    var email_verify = ""
     var push = ""
     var website = ""
+    var referral = ""
     var language = ""
     var chat = ""
     var motyw = ""
@@ -38,6 +41,9 @@ class LoginActivity : ComponentActivity() {
     var dm_allow = ""
     var dm_unread = ""
     var dm_none = ""
+    var friends_number = ""
+    var game_number = ""
+    var money_number = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +53,27 @@ class LoginActivity : ComponentActivity() {
 
         powrotButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val PrivaceButton: TextView = findViewById(R.id.pol_pry)
+
+        PrivaceButton.setOnClickListener {
+            val intent = Intent(this, PrivacePolicyLogActivity::class.java)
+            startActivity(intent)
+        }
+
+        val UtworzButton: TextView = findViewById(R.id.lg_utworz)
+
+        UtworzButton.setOnClickListener {
+            val intent = Intent(this, ZacznijActivity::class.java)
+            startActivity(intent)
+        }
+
+        val PomocButton: TextView = findViewById(R.id.pot_pom)
+
+        PomocButton.setOnClickListener {
+            val intent = Intent(this, PomocLogActivity::class.java)
             startActivity(intent)
         }
 
@@ -102,6 +129,7 @@ class LoginActivity : ComponentActivity() {
                     plan = jsonResponse.getString("plan")
                     userId = jsonResponse.getString("user_id")
                     emails = jsonResponse.getString("email")
+                    email_verify = jsonResponse.getString("email_verify")
                     push = jsonResponse.getString("push")
                     website = jsonResponse.getString("website")
                     language = jsonResponse.getString("language")
@@ -114,11 +142,15 @@ class LoginActivity : ComponentActivity() {
                     dm_allow = jsonResponse.getString("dm_allow")
                     dm_unread = jsonResponse.getString("dm_unread")
                     dm_none = jsonResponse.getString("dm_none")
+                    friends_number = jsonResponse.getString("friends")
+                    money_number = jsonResponse.getString("money")
+                    game_number = jsonResponse.getString("game")
 
                     val jsonObject = JSONObject().apply {
                         put("email", email)
                         put("password", password)
                         put("name", name)
+                        put("email_verify", email_verify)
                         put("plan", plan)
                         put("userId", userId)
                         put("push", push)
@@ -133,6 +165,9 @@ class LoginActivity : ComponentActivity() {
                         put("dm_allow", dm_allow)
                         put("dm_unread", dm_unread)
                         put("dm_none", dm_none)
+                        put("friends_number", friends_number)
+                        put("money_number", money_number)
+                        put("game_number", game_number)
                     }
 
                     val file = File(filesDir, "user.json")

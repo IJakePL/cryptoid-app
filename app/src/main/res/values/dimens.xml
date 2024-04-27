@@ -1,3 +1,9 @@
-<resources>
-    <dimen name="fab_margin">16dp</dimen>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource">
+    <dimen name="button_size">32dp</dimen>
+    <dimen name="fab_margin">5dp</dimen>
+    <dimen name="image_button_width">48dp</dimen>
+    <dimen name="image_button_height">48dp</dimen>
+    <dimen name="image_button_padding">14dp</dimen>
+    <dimen name="fas_margin">5dp</dimen>
+    <dimen name="margin_right">5dp</dimen>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,71 +8,50 @@
     android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/bossbar1"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#15191C">
+        android:layout_height="55dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="start|center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/home_button1"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@null"
                 android:contentDescription="przycisk menu"
-                android:padding="12dp"
+                android:padding="11dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/angle_left"
                 android:tint="#fff"
                 tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="USTAWIENIA APLIKACJI"
+                android:textColor="#DFE3E6"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="visible" />
 
             <View
                 android:id="@+id/separator1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="USTAWIENIA"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-            <View
-                android:id="@+id/separator2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/home_button3"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:background="@drawable/prof_1"
-                android:contentDescription="przycisk logowanie"
-                android:padding="12dp"
-                android:tint="#fff"
-                tools:ignore="UseAppTint" />
         </LinearLayout>
     </FrameLayout>
 
     <ScrollView
+        android:layout_below="@+id/bossbar1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:scrollbars="none">
 
         <LinearLayout
@@ -85,12 +64,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="12dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_menu_lol"
+                android:backgroundTint="#2B2F33"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ustawienia konta"
+                    android:text="Konfiguracja"
+                    android:layout_marginLeft="5dp"
                     android:textColor="#DFE3E6"
                     android:textStyle="bold"
                     android:textSize="14sp"
@@ -100,694 +83,74 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
+                    android:background="@drawable/corner_menu_lol"
+                    android:backgroundTint="#212529"
+                    android:padding="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/basket_shopping_simple"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Zakup plan"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/podany_plan"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/konto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/portrait"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Konto"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/shield1"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Prywatność i bezpieczeństwo"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/users"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Centrum rodzinne"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/podane_centrum_rodzinne"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/laptop_mobile"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Połączone konta"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/podane_connect_account"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/life"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Zaproszenia do znajomych"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/zaproszenia"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
+                        android:id="@+id/lang"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#4799A1"
                             android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/qr"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Zeskanuj kod QR"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:padding="6dp"
+                            android:layout_margin="5dp"
                             android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ustawienia rozliczeń"
-                    android:textColor="#DFE3E6"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="visible" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/folder_upload"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Ulepszone profile"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/dice_d6"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Odbierz nagrody"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/box_heart"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Podaruj plan"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ustawienia aplikacji"
-                    android:textColor="#DFE3E6"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="visible" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/palette"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Wygląd"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/wyglad"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="12dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/clipboard_user"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Dostępność"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="12dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/letter_case"
-                            android:tint="#DFE3E6"
+                            android:tint="#023855"
                             tools:ignore="UseAppTint" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:gravity="center_vertical"
-                            android:text="Język"
+                            android:text="Zmień język aplikacji"
+                            android:textColor="#DFE3E6"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wyglad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#9847A1"
+                            android:contentDescription="przycisk menu"
+                            android:padding="6dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/palette"
+                            android:tint="#4F0255"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="Wybierz wygląd aplikacji"
                             android:textColor="#DFE3E6"
                             android:textStyle="bold"
                             android:textSize="16sp"
@@ -797,55 +160,71 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/language"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/dostepnosc"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#A14747"
                             android:contentDescription="przycisk menu"
-                            android:padding="14dp"
+                            android:padding="8dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/life"
+                            android:tint="#550202"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="Dostosuj dostępność"
+                            android:textColor="#DFE3E6"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ustchat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#7147A1"
+                            android:contentDescription="przycisk menu"
+                            android:padding="7dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
                             android:scaleType="fitCenter"
                             android:src="@drawable/picture"
-                            android:tint="#DFE3E6"
+                            android:tint="#2C0255"
                             tools:ignore="UseAppTint" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:gravity="center_vertical"
-                            android:text="Chat"
+                            android:layout_marginLeft="5dp"
+                            android:text="Ustawienia chatu"
                             android:textColor="#DFE3E6"
                             android:textStyle="bold"
                             android:textSize="16sp"
@@ -855,54 +234,33 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/chat"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/przegladarka"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#5BA147"
                             android:contentDescription="przycisk menu"
-                            android:padding="12dp"
+                            android:padding="6dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
                             android:scaleType="fitCenter"
                             android:src="@drawable/globe"
-                            android:tint="#DFE3E6"
+                            android:tint="#0A5502"
                             tools:ignore="UseAppTint" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
                             android:text="Przeglądarka internetowa"
                             android:textColor="#DFE3E6"
                             android:textStyle="bold"
@@ -913,55 +271,34 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/website"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/powzapk"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#A19547"
                             android:contentDescription="przycisk menu"
-                            android:padding="14dp"
+                            android:padding="8dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
                             android:scaleType="fitCenter"
                             android:src="@drawable/bell"
-                            android:tint="#DFE3E6"
+                            android:tint="#554A02"
                             tools:ignore="UseAppTint" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:gravity="center_vertical"
-                            android:text="Powiadomienia"
+                            android:layout_marginLeft="5dp"
+                            android:text="Powiadomienia z aplikacji"
                             android:textColor="#DFE3E6"
                             android:textStyle="bold"
                             android:textSize="16sp"
@@ -971,53 +308,69 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/push"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text=""
-                            android:textAlignment="viewStart"
-                            android:textColor="#878787"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ikonaapk"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#15191C"
                             android:contentDescription="przycisk menu"
-                            android:padding="14dp"
+                            android:padding="2dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/settings"
-                            android:tint="#DFE3E6"
+                            android:src="@drawable/logo_nestnet"
                             tools:ignore="UseAppTint" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="Ikona aplikacji"
+                            android:textColor="#DFE3E6"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zaawan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/corner_ust"
+                            android:backgroundTint="#4753A1"
+                            android:contentDescription="przycisk menu"
+                            android:padding="8dp"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/settings"
+                            android:tint="#020D55"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
                             android:text="Zaawansowane"
                             android:textColor="#DFE3E6"
                             android:textStyle="bold"
@@ -1028,491 +381,25 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Wsparcie"
-                    android:textColor="#DFE3E6"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="visible" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/interrogation"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Wsparcie"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/info"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Prześlij dziennik debugowania"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/info"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Podziękowania"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Co nowego?"
-                    android:textColor="#DFE3E6"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="visible" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/info"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Co nowego"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/angle_right"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/sign_out_alt"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Wyloguj się"
-                            android:textColor="#F87373"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Informacje developerskie"
-                    android:textColor="#DFE3E6"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="visible" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/corner_ust"
-                    android:backgroundTint="#2B2F33"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/wrench_simple"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Wersja aplikacji"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:padding="15dp"
-                            android:text="1.0.7"
-                            android:textColor="#878787"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/wrench_simple"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Wersja kodu"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:padding="15dp"
-                            android:text="7"
-                            android:textColor="#878787"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/corner_ust_layer"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/wrench_simple"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Wersja wydania"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:padding="15dp"
-                            android:text="testerRelease"
-                            android:textColor="#878787"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:padding="14dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/wrench_simple"
-                            android:tint="#DFE3E6"
-                            tools:ignore="UseAppTint" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:gravity="center_vertical"
-                            android:text="Skopiuj informacje klienta"
-                            android:textColor="#DFE3E6"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:visibility="visible" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1" />
         </LinearLayout>
     </ScrollView>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#15191C">
+        android:id="@+id/bossbar3"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#15191C"
+        android:background="@drawable/corner_dsww">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -1523,25 +410,6 @@
             android:paddingEnd="12dp">
 
             <ImageButton
-                android:id="@+id/home"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:background="@null"
-                android:contentDescription="przycisk menu"
-                android:padding="12dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/home"
-                android:tint="#838181"
-                tools:ignore="UseAppTint" />
-
-            <View
-                android:id="@+id/separator10"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
                 android:id="@+id/film"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -1550,8 +418,8 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/card"
-                android:tint="#838181"
+                android:src="@drawable/search"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
 
             <View
@@ -1569,18 +437,18 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cloud"
-                android:tint="#838181"
+                android:src="@drawable/gamepad"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
 
             <View
-                android:id="@+id/separator13"
+                android:id="@+id/separator10"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/cloud"
+                android:id="@+id/home"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -1588,8 +456,8 @@
                 android:contentDescription="przycisk menu"
                 android:padding="12dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/bell"
-                android:tint="#838181"
+                android:src="@drawable/home"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
 
             <View
@@ -1599,7 +467,25 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/search"
+                android:id="@+id/chat"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="przycisk menu"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/comment_alt"
+                android:tint="#A9A9A9"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/menu"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -1608,9 +494,8 @@
                 android:padding="12dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/menu_bars"
-                android:tint="#6EC8FA"
+                android:tint="#A9A9A9"
                 tools:ignore="UseAppTint" />
         </LinearLayout>
-
     </FrameLayout>
-</LinearLayout>
+</RelativeLayout>

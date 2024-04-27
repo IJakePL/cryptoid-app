@@ -1,6 +1,7 @@
 package com.nestnet.nestapp.ui.theme
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,10 +11,15 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.nestnet.nestapp.MainActivity
+import org.json.JSONObject
+import java.io.File
+import java.io.FileReader
 
 private val DarkColorScheme = darkColorScheme(
     onPrimary = Gray,
@@ -27,17 +33,9 @@ private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
     tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
 )
+
+var themeColor =""
 
 @Composable
 fun NestappTheme(
@@ -45,15 +43,35 @@ fun NestappTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
 
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+    val file = File(LocalContext.current.filesDir, "theme.json")
+
+    if (file.exists()) {
+        try {
+            val fileReader = FileReader(file)
+            val jsonString = fileReader.readText()
+
+            if (jsonString.isNotEmpty()) {
+                val jsonObject = JSONObject(jsonString)
+                val newThemeColor = jsonObject.getString("theme")
+                if (themeColor != newThemeColor) {
+                    themeColor = newThemeColor
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            val intent = Intent(LocalContext.current, MainActivity::class.java)
+            LocalContext.current.startActivity(intent)
+            (LocalContext.current as Activity).finish()
+        }
     }
+
+    val colorScheme = if (themeColor == "Ciemny") {
+        DarkColorScheme
+    } else {
+        LightColorScheme
+    }
+
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {

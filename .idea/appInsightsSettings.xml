@@ -28,10 +28,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.nestnet.nestapp" />
+                  <option name="mobileSdkAppId" value="1:982844793901:android:64579b7d96b3815b4244a4" />
+                  <option name="projectId" value="nestnet-35cd1" />
+                  <option name="projectNumber" value="982844793901" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
