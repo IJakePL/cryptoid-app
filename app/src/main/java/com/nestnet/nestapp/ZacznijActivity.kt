@@ -11,6 +11,7 @@ import android.widget.ImageButton
 import android.graphics.Color
 import android.os.AsyncTask
 import android.text.TextWatcher
+import android.util.Log
 import androidx.activity.ComponentActivity
 import android.util.Patterns
 import android.widget.Toast
@@ -33,19 +34,9 @@ class ZacznijActivity : ComponentActivity() {
         val password_conf_input: EditText = findViewById(R.id.password_conf_input)
 
         val dswButton: ImageButton = findViewById(R.id.lg_back)
-        val logButton: Button = findViewById(R.id.zacznij_kont)
+        val logButton: Button = findViewById(R.id.zacznij)
 
-        val email = email_input.text.toString()
-        val referral = if (referral_input.text.toString().isNotEmpty()) {
-            referral_input.text.toString()
-        } else {
-            "@null"
-        }
-        val nazwa = name_input.text.toString()
-        val haslo = password_input.text.toString()
-        val hasloconf = password_conf_input.text.toString()
-
-        class SendDataToServerTask(private val context: Context, private val nazwa: String, private val email: String, private val haslo: String) : AsyncTask<Void, Void, Boolean>() {
+        class SendDataToServerTask(private val context: Context, private val nazwa: String, private val email: String, private val haslo: String, private val referral: String) : AsyncTask<Void, Void, Boolean>() {
             override fun doInBackground(vararg params: Void?): Boolean {
                 return try {
                     val url = URL("http://fi3.bot-hosting.net:20688/api/create/accounts")
@@ -100,16 +91,26 @@ class ZacznijActivity : ComponentActivity() {
             }
         }
 
-        fun register() {
+        fun register(email: String, referral: String, nazwa: String, haslo: String, hasloconf: String) {
             if (haslo == hasloconf) {
-                SendDataToServerTask(this, nazwa, email, haslo).execute()
+                SendDataToServerTask(this, nazwa, email, haslo, referral).execute()
             } else {
                 Toast.makeText(this, "Hasła muszą być takie same!", Toast.LENGTH_SHORT).show()
             }
         }
 
         logButton.setOnClickListener {
-            register()
+            val email = email_input.text.toString()
+            val referral = if (referral_input.text.toString().isNotEmpty()) {
+                referral_input.text.toString()
+            } else {
+                "@null"
+            }
+            val nazwa = name_input.text.toString()
+            val haslo = password_input.text.toString()
+            val hasloconf = password_conf_input.text.toString()
+
+            register(email, referral, nazwa, haslo, hasloconf)
         }
 
         dswButton.setOnClickListener {

@@ -108,6 +108,7 @@ class HomeActivity : ComponentActivity() {
 
         val MenuButton: EditText = findViewById(R.id.search)
         val Profile: LinearLayout = findViewById(R.id.profile)
+        val Action: LinearLayout = findViewById(R.id.action)
         val Chat: ImageButton = findViewById(R.id.chat)
 
         val calendar = Calendar.getInstance()
@@ -122,6 +123,11 @@ class HomeActivity : ComponentActivity() {
 
         Profile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        Action.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 

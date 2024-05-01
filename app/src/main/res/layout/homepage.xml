@@ -1299,13 +1299,13 @@
                 android:layout_weight="1" />
 
             <LinearLayout
+                android:id="@+id/action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="start|center_vertical"
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/action"
                     android:layout_width="38dp"
                     android:layout_height="38dp"
                     android:layout_gravity="center"

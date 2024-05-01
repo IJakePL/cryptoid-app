@@ -164,7 +164,7 @@
                     android:textColor="#E1E1E0"
                     android:textSize="17sp"
                     android:textStyle="bold"
-                    android:id="@+id/zacznij_kont" />
+                    android:id="@+id/zacznij" />
             </LinearLayout>
         </LinearLayout>
 
