@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -81,19 +82,22 @@ class SplashActivity : AppCompatActivity() {
                             FetchDataTask().execute(emails, password)
                         } else {
                             val intent = Intent(this@SplashActivity, MainActivity::class.java)
-                            startActivity(intent)
+                            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                            startActivity(intent, bundel)
                             finish()
                         }
                     }, 3000)
                 } else {
                     val intent = Intent(this@SplashActivity, MainActivity::class.java)
-                    startActivity(intent)
+                    val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                    startActivity(intent, bundel)
                     finish()
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@SplashActivity, SplashActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         } else {
@@ -130,14 +134,16 @@ class SplashActivity : AppCompatActivity() {
                 println("Plik user.json został utworzony.")
 
                 val intent = Intent(this@SplashActivity, SplashActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             } catch (e: Exception) {
                 e.printStackTrace()
                 println("Wystąpił błąd podczas tworzenia pliku user.json: ${e.message}")
 
                 val intent = Intent(this@SplashActivity, SplashActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }
@@ -235,11 +241,13 @@ class SplashActivity : AppCompatActivity() {
             if (result) {
                 val intent = Intent(this@SplashActivity, HomeActivity::class.java)
                 finish()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                startActivity(intent, bundel)
             } else {
                 val intent = Intent(this@SplashActivity, MainActivity::class.java)
                 finish()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@SplashActivity).toBundle()
+                startActivity(intent, bundel)
             }
             finish()
         }

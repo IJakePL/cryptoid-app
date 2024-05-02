@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.AsyncTask
@@ -41,83 +42,42 @@ class MenuActivity : ComponentActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@MenuActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@MenuActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }
 
-        val MenuButton: ImageButton = findViewById(R.id.home_button1)
-        val Ustawienia: LinearLayout = findViewById(R.id.ustawienia)
-        val Sklep: LinearLayout = findViewById(R.id.sklep)
-        val Aktu: LinearLayout = findViewById(R.id.aktu)
-        val switched: LinearLayout = findViewById(R.id.switched)
-        val ustawkonta: LinearLayout = findViewById(R.id.ustawkonta)
-        val aboutapp: LinearLayout = findViewById(R.id.aboutapp)
-        val helps: LinearLayout = findViewById(R.id.helps)
-
-        aboutapp.setOnClickListener {
-            val intent = Intent(this, OnasActivity::class.java)
-            startActivity(intent)
-        }
-
-        helps.setOnClickListener {
-            val intent = Intent(this, HelpPageActivity::class.java)
-            startActivity(intent)
-        }
-
-        ustawkonta.setOnClickListener {
-            val intent = Intent(this, KontoActivity::class.java)
-            startActivity(intent)
-        }
-
-        MenuButton.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-        }
-
-        Sklep.setOnClickListener {
-            val intent = Intent(this, SklepActivity::class.java)
-            startActivity(intent)
-        }
-
-        Aktu.setOnClickListener {
-            val intent = Intent(this, AktualizacjaActivity::class.java)
-            startActivity(intent)
-        }
-
-        Ustawienia.setOnClickListener {
-            val intent = Intent(this, UstawieniaActivity::class.java)
-            startActivity(intent)
-        }
-
-        switched.setOnClickListener {
-            val jsonObject = JSONObject().apply {
-                put("email", "")
-                put("password", "")
-            }
-
-            val file = File(filesDir, "user.json")
-            val fileWriter = FileWriter(file)
-            fileWriter.use {
-                it.write(jsonObject.toString())
-            }
-
-            OfflineActv().execute(userid)
-            val intent = Intent(this@MenuActivity, SplashActivity::class.java)
-            startActivity(intent)
-        }
+//        switched.setOnClickListener {
+//            val jsonObject = JSONObject().apply {
+//                put("email", "")
+//                put("password", "")
+//            }
+//
+//            val file = File(filesDir, "user.json")
+//            val fileWriter = FileWriter(file)
+//            fileWriter.use {
+//                it.write(jsonObject.toString())
+//            }
+//
+//            OfflineActv().execute(userid)
+//            val intent = Intent(this@MenuActivity, SplashActivity::class.java)
+//            startActivity(intent)
+//        }
 
         val HomeButton: ImageButton = findViewById(R.id.home)
         val chat: ImageButton = findViewById(R.id.chat)
 
         chat.setOnClickListener {
             val intent = Intent(this, ChatActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@MenuActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@MenuActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 

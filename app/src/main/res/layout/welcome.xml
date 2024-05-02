@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f6f4"
+    android:background="#171717"
     android:orientation="vertical">
 
     <LinearLayout
@@ -23,19 +23,6 @@
                 android:layout_height="55dp"
                 android:gravity="start|center_vertical"
                 android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/lg_back"
-                    android:layout_width="48dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:contentDescription="przycisk menu"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/angle_left"
-                    android:tint="#959595"
-                    tools:ignore="UseAppTint" />
             </LinearLayout>
 
             <LinearLayout
@@ -48,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:text="Welcome to Cryptoid"
+                    android:text="Welcome to CryptoID"
                     android:textAlignment="center"
                     android:layout_gravity="center"
                     android:textColor="#808080"
@@ -99,14 +86,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="20dp"
-            android:backgroundTint="#E1E1E0"
+            android:backgroundTint="#232523"
             android:background="@drawable/corner_dsww"
             android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Easy way to manage your Cryptoid"
+                android:text="Easy way to manage your CryptoID"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textColor="#808080"
@@ -140,7 +127,7 @@
                     android:layout_weight="1"
                     android:layout_margin="10dp"
                     android:background="@drawable/corner_dsww"
-                    android:backgroundTint="#f5f6f4"
+                    android:backgroundTint="#171717"
                     android:text="Create a wallet"
                     android:textColor="#959595"
                     android:textSize="14sp"
@@ -153,7 +140,7 @@
                     android:layout_weight="1"
                     android:layout_margin="10dp"
                     android:background="@drawable/corner_dsww"
-                    android:backgroundTint="#f5f6f4"
+                    android:backgroundTint="#171717"
                     android:text="login to wallet"
                     android:textColor="#959595"
                     android:textSize="14sp"

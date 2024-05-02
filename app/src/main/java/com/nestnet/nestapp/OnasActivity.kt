@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -16,14 +17,16 @@ class OnasActivity : AppCompatActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@OnasActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val HomeButton: ImageButton = findViewById(R.id.home)
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@OnasActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val about: LinearLayout = findViewById(R.id.about)
@@ -32,17 +35,20 @@ class OnasActivity : AppCompatActivity() {
 
         about.setOnClickListener {
             val intent = Intent(this, OnasActivityzwei::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@OnasActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         author.setOnClickListener {
             val intent = Intent(this, TworcyActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@OnasActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         privacypolicy.setOnClickListener {
             val intent = Intent(this, PrivacePolicyActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@OnasActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

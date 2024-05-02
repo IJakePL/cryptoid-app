@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -33,7 +34,8 @@ class KontoActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@KontoActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }
@@ -42,42 +44,48 @@ class KontoActivity : AppCompatActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val HomeButton: ImageButton = findViewById(R.id.home)
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val polaczonekonta: LinearLayout = findViewById(R.id.polaczonekonta)
 
         polaczonekonta.setOnClickListener {
             val intent = Intent(this, ConnectAccountActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val NameButton: LinearLayout = findViewById(R.id.name)
 
         NameButton.setOnClickListener {
             val intent = Intent(this, ChangeNameActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val EmailButton: LinearLayout = findViewById(R.id.email)
 
         EmailButton.setOnClickListener {
             val intent = Intent(this, ChangeEmailActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val PassButton: LinearLayout = findViewById(R.id.pass)
 
         PassButton.setOnClickListener {
             val intent = Intent(this, ChangePasswordActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@KontoActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

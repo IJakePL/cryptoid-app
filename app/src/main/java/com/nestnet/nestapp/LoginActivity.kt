@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.Context
 import android.os.Bundle
@@ -49,33 +50,15 @@ class LoginActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.logowanie)
 
-        val powrotButton: ImageButton = findViewById(R.id.lg_back)
-
-        powrotButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
-        val PrivaceButton: TextView = findViewById(R.id.pol_pry)
-
-        PrivaceButton.setOnClickListener {
-            val intent = Intent(this, PrivacePolicyLogActivity::class.java)
-            startActivity(intent)
-        }
 
         val UtworzButton: TextView = findViewById(R.id.lg_utworz)
 
         UtworzButton.setOnClickListener {
             val intent = Intent(this, ZacznijActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
-        val PomocButton: TextView = findViewById(R.id.pot_pom)
-
-        PomocButton.setOnClickListener {
-            val intent = Intent(this, PomocLogActivity::class.java)
-            startActivity(intent)
-        }
 
         emailInput = findViewById(R.id.email_input)
         passwordInput = findViewById(R.id.password_input)
@@ -191,11 +174,13 @@ class LoginActivity : ComponentActivity() {
         override fun onPostExecute(result: Boolean) {
             if (result) {
                 val intent = Intent(this@LoginActivity, SplashActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
+                startActivity(intent, bundel)
             } else {
                 val intent = Intent(this@LoginActivity, LoginActivity::class.java)
                 Toast.makeText(this@LoginActivity, "Napotkaliśmy problem! (ars18)", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
+                startActivity(intent, bundel)
             }
             finish()
         }

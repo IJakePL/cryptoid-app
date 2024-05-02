@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.AsyncTask
@@ -32,7 +33,8 @@ class ChangeEmailActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, KontoActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangeEmailActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         var email = ""
@@ -51,7 +53,8 @@ class ChangeEmailActivity : ComponentActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@ChangeEmailActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangeEmailActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }
@@ -140,7 +143,8 @@ class ChangeEmailActivity : ComponentActivity() {
             if (result) {
                 val intent = Intent(this@ChangeEmailActivity, ChangeEmailActivity::class.java)
                 Toast.makeText(this@ChangeEmailActivity, "Zapisano adres e-mail!", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangeEmailActivity).toBundle()
+                startActivity(intent, bundel)
             } else {
                 Toast.makeText(this@ChangeEmailActivity, "Napotkaliśmy problem! (er13)", Toast.LENGTH_SHORT).show()
             }

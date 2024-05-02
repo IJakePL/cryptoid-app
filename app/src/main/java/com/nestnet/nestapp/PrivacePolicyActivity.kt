@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -14,14 +15,16 @@ class PrivacePolicyActivity : AppCompatActivity() {
 
                 MenuButton.setOnClickListener {
                         val intent = Intent(this, OnasActivity::class.java)
-                        startActivity(intent)
+                        val bundel = ActivityOptions.makeSceneTransitionAnimation(this@PrivacePolicyActivity).toBundle()
+                        startActivity(intent, bundel)
                 }
 
                 val HomeButton: ImageButton = findViewById(R.id.home)
 
                 HomeButton.setOnClickListener {
                         val intent = Intent(this, HomeActivity::class.java)
-                        startActivity(intent)
+                        val bundel = ActivityOptions.makeSceneTransitionAnimation(this@PrivacePolicyActivity).toBundle()
+                        startActivity(intent, bundel)
                 }
         }
 }

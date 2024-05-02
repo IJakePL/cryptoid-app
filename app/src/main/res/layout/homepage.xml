@@ -6,7 +6,7 @@
     android:id="@+id/body"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3E1EC"
+    android:background="#171717"
     android:orientation="vertical">
 
     <FrameLayout
@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="NICKNAME"
-                        android:textColor="#1e1e1e"
+                        android:textColor="#CDCFCD"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:visibility="visible" />
@@ -65,7 +65,7 @@
                         android:contentDescription="przycisk menu"
                         android:scaleType="fitCenter"
                         android:src="@drawable/angle_right"
-                        android:tint="#535353"
+                        android:tint="#CDCFCD"
                         tools:ignore="UseAppTint" />
                 </LinearLayout>
 
@@ -78,7 +78,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#232523"
                     android:background="@drawable/corner_ust"
                     android:padding="6dp"
                     android:layout_marginRight="5dp"
@@ -101,7 +101,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_gravity="center"
                         android:text="0"
-                        android:textColor="#1e1e1e"
+                        android:textColor="#454545"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:visibility="visible" />
@@ -110,7 +110,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center"
-                        android:backgroundTint="#E3E1EC"
+                        android:backgroundTint="#454545"
                         android:background="@drawable/corner_level"
                         android:layout_marginLeft="10dp"
                         android:padding="7dp"
@@ -130,7 +130,7 @@
                     android:contentDescription="przycisk menu"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bell"
-                    android:tint="#535353"
+                    android:tint="#CDCFCD"
                     tools:ignore="UseAppTint" />
             </LinearLayout>
         </LinearLayout>
@@ -156,7 +156,7 @@
                 android:layout_margin="10dp"
                 android:padding="5dp"
                 android:orientation="horizontal"
-                android:backgroundTint="#FFFFFF"
+                android:backgroundTint="#232523"
                 android:background="@drawable/corner_ust">
 
                 <ImageButton
@@ -181,7 +181,7 @@
                     android:textColor="#959595"
                     android:textColorHint="#959595"
                     android:textSize="20dp"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#232523"
                     android:background="@drawable/corner_ust"
                     tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
@@ -202,17 +202,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total balance in "
-                        android:textColor="#F2DBFF"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="USD"
-                        android:textColor="#FFFFFF"
+                        android:text="Total Balance"
+                        android:textColor="#8FFFFFFF"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -226,7 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="DeFi Wallet"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#80000000"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -235,6 +226,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:text="$0.00"
                     android:textColor="#E8E8E8"
                     android:textSize="35sp"
@@ -242,13 +234,20 @@
                     android:visibility="visible" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/corner_prf"
+                    android:backgroundTint="#171717"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:contentDescription="przycisk menu"
@@ -263,20 +262,10 @@
                         android:text="+$0.00"
                         android:layout_marginLeft="5dp"
                         android:textColor="#89c188"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="total"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -292,7 +281,7 @@
                     android:layout_weight="1"
                     android:layout_marginRight="10dp"
                     android:padding="10dp"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#232523"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
 
@@ -304,7 +293,7 @@
                         android:contentDescription="przycisk menu"
                         android:scaleType="fitCenter"
                         android:src="@drawable/download"
-                        android:tint="#A33BFF"
+                        android:tint="#959595"
                         tools:ignore="UseAppTint" />
 
                     <TextView
@@ -313,7 +302,7 @@
                         android:text="Receive"
                         android:layout_marginTop="5dp"
                         android:layout_gravity="center"
-                        android:textColor="#A33BFF"
+                        android:textColor="#959595"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -325,7 +314,7 @@
                     android:layout_weight="1"
                     android:layout_marginLeft="10dp"
                     android:padding="10dp"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#232523"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
 
@@ -337,7 +326,7 @@
                         android:contentDescription="przycisk menu"
                         android:scaleType="fitCenter"
                         android:src="@drawable/upload"
-                        android:tint="#A33BFF"
+                        android:tint="#959595"
                         tools:ignore="UseAppTint" />
 
                     <TextView
@@ -346,7 +335,7 @@
                         android:text="Send"
                         android:layout_marginTop="5dp"
                         android:layout_gravity="center"
-                        android:textColor="#A33BFF"
+                        android:textColor="#959595"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -384,8 +373,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Coins"
-                        android:textColor="#1e1e1e"
+                        android:text="Portfolio"
+                        android:textColor="#CDCFCD"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -400,7 +389,7 @@
                         android:layout_height="wrap_content"
                         android:text="View all"
                         android:layout_gravity="center"
-                        android:textColor="#A33BFF"
+                        android:textColor="#454545"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -411,7 +400,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#232523"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
 
@@ -436,7 +425,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Bitcoin"
-                                    android:textColor="#959595"
+                                    android:textColor="#CDCFCD"
                                     android:textSize="17sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -515,7 +504,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0.00000000 BTC"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -525,7 +514,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:text="~$0.00"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
                                     android:textStyle="bold"
@@ -571,7 +560,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Ethereum"
-                                    android:textColor="#959595"
+                                    android:textColor="#CDCFCD"
                                     android:textSize="17sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -650,7 +639,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0.00000000 ETH"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -660,7 +649,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:text="~$0.00"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
                                     android:textStyle="bold"
@@ -706,7 +695,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Doge"
-                                    android:textColor="#959595"
+                                    android:textColor="#CDCFCD"
                                     android:textSize="17sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -785,7 +774,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0.00000000 DOGE"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -795,7 +784,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:text="~$0.00"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
                                     android:textStyle="bold"
@@ -841,7 +830,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Sushi"
-                                    android:textColor="#959595"
+                                    android:textColor="#CDCFCD"
                                     android:textSize="17sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -920,7 +909,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0.00000000 SUSHI"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     android:visibility="visible" />
@@ -930,7 +919,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:text="~$0.00"
-                                    android:textColor="#1e1e1e"
+                                    android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
                                     android:textStyle="bold"
@@ -972,7 +961,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Transaction history"
-                        android:textColor="#1e1e1e"
+                        android:textColor="#CDCFCD"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -987,7 +976,7 @@
                         android:layout_height="wrap_content"
                         android:text="View full"
                         android:layout_gravity="center"
-                        android:textColor="#A33BFF"
+                        android:textColor="#454545"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -1019,7 +1008,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Favorite currencies"
-                        android:textColor="#1e1e1e"
+                        android:textColor="#CDCFCD"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -1040,7 +1029,7 @@
                             android:layout_height="wrap_content"
                             android:text="Add new"
                             android:layout_gravity="center"
-                            android:textColor="#A33BFF"
+                            android:textColor="#454545"
                             android:layout_marginRight="5dp"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -1054,7 +1043,7 @@
                             android:contentDescription="przycisk menu"
                             android:scaleType="fitCenter"
                             android:src="@drawable/plus"
-                            android:tint="#A33BFF"
+                            android:tint="#454545"
                             tools:ignore="UseAppTint" />
                     </LinearLayout>
                 </LinearLayout>
@@ -1085,7 +1074,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Latest news"
-                        android:textColor="#1e1e1e"
+                        android:textColor="#CDCFCD"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
@@ -1106,7 +1095,7 @@
                             android:layout_height="wrap_content"
                             android:text="Show more"
                             android:layout_gravity="center"
-                            android:textColor="#A33BFF"
+                            android:textColor="#454545"
                             android:layout_marginRight="5dp"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -1120,7 +1109,7 @@
                             android:contentDescription="przycisk menu"
                             android:scaleType="fitCenter"
                             android:src="@drawable/angle_right"
-                            android:tint="#A33BFF"
+                            android:tint="#454545"
                             tools:ignore="UseAppTint" />
                     </LinearLayout>
                 </LinearLayout>
@@ -1172,14 +1161,14 @@
                     android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/home"
-                    android:tint="#A33BFF"
+                    android:tint="#2EC317"
                     tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Home"
-                    android:textColor="#A33BFF"
+                    android:textColor="#2EC317"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:layout_gravity="center"
@@ -1208,14 +1197,14 @@
                     android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/stats"
-                    android:tint="#959595"
+                    android:tint="#454545"
                     tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Market"
-                    android:textColor="#959595"
+                    android:textColor="#454545"
                     android:textStyle="bold"
                     android:textSize="12sp"
                     android:layout_gravity="center"
@@ -1243,14 +1232,14 @@
                     android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pickaxe"
-                    android:tint="#959595"
+                    android:tint="#454545"
                     tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Miner"
-                    android:textColor="#959595"
+                    android:textColor="#454545"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:layout_gravity="center"
@@ -1278,14 +1267,14 @@
                     android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gamepad"
-                    android:tint="#959595"
+                    android:tint="#454545"
                     tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Games"
-                    android:textColor="#959595"
+                    android:textColor="#454545"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:layout_gravity="center"
@@ -1299,13 +1288,13 @@
                 android:layout_weight="1" />
 
             <LinearLayout
-                android:id="@+id/action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="start|center_vertical"
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/action"
                     android:layout_width="38dp"
                     android:layout_height="38dp"
                     android:layout_gravity="center"
@@ -1314,14 +1303,14 @@
                     android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pixabay"
-                    android:tint="#959595"
+                    android:tint="#454545"
                     tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Actions"
-                    android:textColor="#959595"
+                    android:textColor="#454545"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:layout_gravity="center"
@@ -1350,14 +1339,14 @@
                     android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/comment_username"
-                    android:tint="#959595"
+                    android:tint="#454545"
                     tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Chat"
-                    android:textColor="#959595"
+                    android:textColor="#454545"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:layout_gravity="center"

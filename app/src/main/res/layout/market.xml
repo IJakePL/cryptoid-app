@@ -1,0 +1,2759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171717"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_below="@+id/bossbar"
+        android:id="@+id/bossbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Market"
+                android:textColor="#CDCFCD"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust">
+
+                <ImageButton
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@null"
+                    android:padding="6dp"
+                    android:contentDescription="przycisk menu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search"
+                    android:tint="#959595"
+                    tools:ignore="UseAppTint" />
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="text"
+                    android:layout_gravity="center"
+                    android:hint="Search"
+                    android:textColor="#959595"
+                    android:textColorHint="#959595"
+                    android:textSize="20dp"
+                    android:backgroundTint="#232523"
+                    android:background="@drawable/corner_ust"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-6928750575920542/3655505448">
+                </com.google.android.gms.ads.AdView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prices"
+                        android:textColor="#CDCFCD"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="sync every 30 sec"
+                        android:textColor="#454545"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#232523"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bitcoin"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upbtc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upbtcvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downbtc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downbtcvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/btcprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_15"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ethereum"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upethereum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upethereumvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downethereum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downethereumvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ethprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_16"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Doge"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/updoge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/updogevalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downdoge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downdogevalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/dogeprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_17"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sushi"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upsushi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upsushivalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downsushi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downsushivalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/sushiprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_18"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="BNB"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upbnb"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upbnbvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downbnb"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downbnbvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/bnbprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_22"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bitcoin Cash"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upbch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upbchvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downbch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downbchvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/bchprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_23"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cake"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upcake"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upcakevalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downcake"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downcakevalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/cakeprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_24"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ethereum Classic"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upetc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upetcvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downetc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downetcvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/etcprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_25"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Frax Ether"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upfrxeth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upfrxethvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downfrxeth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downfrxethvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/frxethprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_26"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gnosis"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upgno"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upgnovalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downgno"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downgnovalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/gnoprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#FFFFFF"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_27"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Litecoin"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upltc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upltcvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downltc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downltcvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ltcprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_29"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mantle Staked Ether"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upmeth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upmethvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downmeth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downmethvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/methprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_30"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Maker"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upmkr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upmkrvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downmkr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downmkrvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/mkrprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_31"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="NEO"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upneo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upneovalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downneo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downneovalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/neoprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_32"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ORDI"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upordi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upordivalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downordi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downordivalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ordiprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_33"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Quant"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upqnt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upqntvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downqnt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downqntvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/qntprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_34"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Solana"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upsol"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upsolvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downsol"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downsolvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/solprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_35"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/corner_home_coins"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Swell Ethereum"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upsweth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upswethvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downsweth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downswethvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/swethprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_38"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Monero"
+                                    android:textColor="#CDCFCD"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/upxmr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_up"
+                                        android:tint="#89c188"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/upxmrvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="+0.00%"
+                                        android:textColor="#89c188"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/downxmr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:contentDescription="przycisk menu"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/arrow_trend_down"
+                                        android:tint="#C18888"
+                                        tools:ignore="UseAppTint" />
+
+                                    <TextView
+                                        android:id="@+id/downxmrvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="-0.00%"
+                                        android:textColor="#C18888"
+                                        android:textSize="15sp"
+                                        android:layout_gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/xmrprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="#454545"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#FFFFFF"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_37"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/bossbar3"
+        android:layout_width="wrap_content"
+        android:background="@drawable/corner_home_bossbar"
+        android:layout_height="75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/home"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home"
+                    android:tint="#454545"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="#454545"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separator10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/market"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/stats"
+                    android:tint="#2EC317"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Market"
+                    android:textColor="#2EC317"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/miner"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pickaxe"
+                    android:tint="#454545"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miner"
+                    android:textColor="#454545"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/game"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gamepad"
+                    android:tint="#454545"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Games"
+                    android:textColor="#454545"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separator13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/action"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pixabay"
+                    android:tint="#454545"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actions"
+                    android:textColor="#454545"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separator14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/chat"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="przycisk menu"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/comment_username"
+                    android:tint="#454545"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+                    android:textColor="#454545"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="0dp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

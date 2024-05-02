@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -68,7 +69,8 @@ class ChatMessageActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@ChatMessageActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatMessageActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }

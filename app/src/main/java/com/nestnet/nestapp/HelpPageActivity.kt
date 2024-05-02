@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -15,21 +16,24 @@ class HelpPageActivity : AppCompatActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HelpPageActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val chat: ImageButton = findViewById(R.id.chat)
 
         chat.setOnClickListener {
             val intent = Intent(this, ChatActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HelpPageActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val HomeButton: ImageButton = findViewById(R.id.home)
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HelpPageActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val about: LinearLayout = findViewById(R.id.faq)
@@ -37,12 +41,14 @@ class HelpPageActivity : AppCompatActivity() {
 
         about.setOnClickListener {
             val intent = Intent(this, PomocActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HelpPageActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         author.setOnClickListener {
             val intent = Intent(this, KontaktActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HelpPageActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

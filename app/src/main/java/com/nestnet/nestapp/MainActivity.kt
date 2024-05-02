@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -12,16 +13,18 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.welcome)
 
         val rozpocznijButton: Button = findViewById(R.id.wel_rozpocznij)
-        val logButton: TextView = findViewById(R.id.wel_logowanie)
+        val logButton: Button = findViewById(R.id.wel_logowanie)
 
         rozpocznijButton.setOnClickListener {
             val intent = Intent(this, ZacznijActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@MainActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         logButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@MainActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

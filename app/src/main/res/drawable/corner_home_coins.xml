@@ -9,7 +9,7 @@
     <!-- Dolne obramowanie -->
     <item android:top="-2dp" android:left="-2dp" android:right="-2dp">
         <shape android:shape="rectangle">
-            <stroke android:width="2dp" android:color="#E3E1EC"/>
+            <stroke android:width="2dp" android:color="#171717"/>
         </shape>
     </item>
 </layer-list>

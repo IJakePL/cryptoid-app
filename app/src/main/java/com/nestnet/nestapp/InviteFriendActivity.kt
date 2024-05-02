@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.AsyncTask
@@ -30,7 +31,8 @@ class InviteFriendActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, ChatActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@InviteFriendActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         var id_sender = ""
@@ -49,7 +51,8 @@ class InviteFriendActivity : ComponentActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@InviteFriendActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@InviteFriendActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }
@@ -115,7 +118,8 @@ class InviteFriendActivity : ComponentActivity() {
             if (result) {
                 val intent = Intent(this@InviteFriendActivity, InviteFriendActivity::class.java)
                 Toast.makeText(this@InviteFriendActivity, "Zaproszenie zostało wysłane", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@InviteFriendActivity).toBundle()
+                startActivity(intent, bundel)
             } else {
                 Toast.makeText(this@InviteFriendActivity, "Napotkaliśmy problem! (ad98)", Toast.LENGTH_SHORT).show()
             }

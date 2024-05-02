@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
@@ -26,7 +27,8 @@ class ConnectAccountDiscordActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, ConnectAccountMethodActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountDiscordActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val file = File(this@ConnectAccountDiscordActivity.filesDir, "user.json")
@@ -43,7 +45,8 @@ class ConnectAccountDiscordActivity : ComponentActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@ConnectAccountDiscordActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountDiscordActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }

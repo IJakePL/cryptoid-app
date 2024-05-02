@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -16,14 +17,16 @@ class ConnectAccountMethodActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this@ConnectAccountMethodActivity, ConnectAccountActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountMethodActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val MethodButton: LinearLayout = findViewById(R.id.discord)
 
         MethodButton.setOnClickListener {
             val intent = Intent(this@ConnectAccountMethodActivity, ConnectAccountDiscordActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountMethodActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

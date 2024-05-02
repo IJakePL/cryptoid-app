@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -19,14 +20,16 @@ class TworcyActivity : AppCompatActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, OnasActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@TworcyActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val HomeButton: ImageButton = findViewById(R.id.home)
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@TworcyActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         githubButtonR4ved.setOnClickListener {
@@ -43,7 +46,8 @@ class TworcyActivity : AppCompatActivity() {
 
             val githubUrl = "https://github.com/r4ved"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl))
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@TworcyActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         githubButtonXanto.setOnClickListener {
@@ -60,7 +64,8 @@ class TworcyActivity : AppCompatActivity() {
 
             val githubUrl = "https://github.com/XantoTech"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl))
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@TworcyActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

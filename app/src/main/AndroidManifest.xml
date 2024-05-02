@@ -40,30 +40,21 @@
         <activity android:name=".ChangeEmailActivity"/>
         <activity android:name=".ChangePasswordActivity"/>
         <activity android:name=".InviteFriendActivity"/>
-        <activity android:name=".PortfelActivity"/>
         <activity android:name=".ChatMessageActivity"/>
         <activity android:name=".HelpPageActivity"/>
         <activity android:name=".PomocActivity"/>
-        <activity android:name=".PomocLogActivity"/>
         <activity android:name=".ConnectAccountActivity"/>
         <activity android:name=".ConnectAccountDiscordActivity"/>
         <activity android:name=".ConnectAccountMethodActivity"/>
         <activity android:name=".OnasActivity"/>
         <activity android:name=".OnasActivityzwei"/>
-        <activity android:name=".SelectGroupActivity"/>
-        <activity android:name=".CreateGroupActivity"/>
-        <activity android:name=".GroupShowActivity"/>
-        <activity android:name=".YourGroupActivity"/>
         <activity android:name=".PrivacePolicyActivity"/>
-        <activity android:name=".AktualizacjaActivity"/>
-        <activity android:name=".PrivacePolicyLogActivity"/>
-        <activity android:name=".SklepActivity"/>
-        <activity android:name=".OdznakiActivity"/>
         <activity android:name=".TworcyActivity"/>
         <activity android:name=".KontaktActivity"/>
         <activity android:name=".KontoActivity"/>
         <activity android:name=".UstawieniaActivity"/>
         <activity android:name=".HomeActivity"/>
+        <activity android:name=".MarketActivity"/>
 
         <activity
             android:name=".SplashActivity"

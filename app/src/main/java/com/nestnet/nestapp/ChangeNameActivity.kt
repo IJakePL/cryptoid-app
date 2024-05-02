@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.AsyncTask
@@ -30,7 +31,8 @@ class ChangeNameActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, KontoActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangeNameActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         var name = ""
@@ -49,7 +51,8 @@ class ChangeNameActivity : ComponentActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@ChangeNameActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangeNameActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }
@@ -126,7 +129,8 @@ class ChangeNameActivity : ComponentActivity() {
             if (result) {
                 val intent = Intent(this@ChangeNameActivity, ChangeNameActivity::class.java)
                 Toast.makeText(this@ChangeNameActivity, "Zapisano nazwę użytkownika", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangeNameActivity).toBundle()
+                startActivity(intent, bundel)
             } else {
                 Toast.makeText(this@ChangeNameActivity, "Napotkaliśmy problem! (wr67)", Toast.LENGTH_SHORT).show()
             }

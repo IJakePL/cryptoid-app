@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f6f4"
+    android:background="#171717"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,19 +12,6 @@
         android:layout_height="55dp"
         android:gravity="start|center_vertical"
         android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/lg_back"
-            android:layout_width="48dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:background="@null"
-            android:contentDescription="przycisk menu"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/angle_left"
-            android:tint="#959595"
-            tools:ignore="UseAppTint" />
     </LinearLayout>
 
         <LinearLayout
@@ -37,8 +24,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="158dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:src="@drawable/img_19" />
 
@@ -49,7 +35,7 @@
                 android:text="CryptoID ver. 1.0.0 (production)"
                 android:textAlignment="center"
                 android:textColor="#808080"
-                android:textSize="15sp"
+                android:textSize="17sp"
                 android:visibility="visible" />
 
             <TextView
@@ -57,18 +43,18 @@
                 android:layout_height="wrap_content"
                 android:text="Enter the required values below."
                 android:textAlignment="center"
-                android:layout_marginBottom="30dp"
                 android:textColor="#808080"
-                android:textSize="15sp"
+                android:textSize="17sp"
                 android:visibility="visible" />
 
             <ScrollView
                 android:id="@+id/scroll"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="#E1E1E0"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/corner_chat_lol"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:backgroundTint="#232523"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/corner"
                 android:padding="20dp"
                 android:scrollbars="none">
 
@@ -88,10 +74,11 @@
 
                     <EditText
                         android:id="@+id/email_input"
+                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/corner"
-                        android:backgroundTint="#37A6A6A6"
+                        android:backgroundTint="#171717"
                         android:hint=""
                         android:inputType="text"
                         android:padding="12dp"
@@ -114,8 +101,9 @@
                         android:id="@+id/password_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/corner"
-                        android:backgroundTint="#37A6A6A6"
+                        android:backgroundTint="#171717"
                         android:hint=""
                         android:inputType="text"
                         android:padding="12dp"
@@ -130,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/corner_login"
-                        android:backgroundTint="#f5f6f4"
+                        android:backgroundTint="#171717"
                         android:text="connect to wallet"
                         android:textColor="#959595"
                         android:textSize="17sp"
@@ -140,67 +128,22 @@
                         android:id="@+id/lg_utworz"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/gradient_home"
                         android:text="Create a new wallet"
                         android:textColor="#f5f6f4"
                         android:textSize="17sp"
                         android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="CryptoID.pl | Copyright © 2024"
+                        android:textAlignment="center"
                         android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
-
-                        <View
-                            android:id="@+id/separator3"
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="1"
-                            android:background="#959595"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Information zone:"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textColor="#959595"
-                            android:textSize="15sp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
-
-                        <View
-                            android:id="@+id/separator4"
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="1"
-                            android:background="#959595"/>
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/pol_pry"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="1. Please read our privacy policy."
-                        android:textAlignment="textStart"
                         android:textColor="#959595"
-                        android:textSize="15sp"
-                        android:visibility="visible" />
-
-                    <TextView
-                        android:id="@+id/pot_pom"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="2. I need help logging in!"
-                        android:textAlignment="textStart"
-                        android:textColor="#959595"
-                        android:textSize="15sp"
+                        android:textSize="17sp"
                         android:visibility="visible" />
                 </LinearLayout>
             </ScrollView>

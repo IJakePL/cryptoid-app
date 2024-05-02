@@ -1,6 +1,7 @@
 package com.nestnet.nestapp
 
 import Task
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -43,28 +44,32 @@ class ChatActivity : AppCompatActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val HomeButton: ImageButton = findViewById(R.id.home)
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val InviteButton: ImageButton = findViewById(R.id.invite_friends)
 
         InviteButton.setOnClickListener {
             val intent = Intent(this, InviteFriendActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val menu: ImageButton = findViewById(R.id.menu)
 
         menu.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val allFriendsLayout = findViewById<LinearLayout>(R.id.all_friends)
@@ -184,7 +189,8 @@ class ChatActivity : AppCompatActivity() {
             if (result) {
                 val intent = Intent(this@ChatActivity, ChatActivity::class.java)
                 Toast.makeText(this@ChatActivity, "Zaproszenie zostało zaakceptowane", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             } else {
                 Toast.makeText(this@ChatActivity, "Napotkaliśmy problem! (ry26)", Toast.LENGTH_SHORT).show()
@@ -276,7 +282,8 @@ class ChatActivity : AppCompatActivity() {
             if (result) {
                 val intent = Intent(this@ChatActivity, ChatActivity::class.java)
                 Toast.makeText(this@ChatActivity, "Zaproszenie zostało cofnięte", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             } else {
                 Toast.makeText(this@ChatActivity, "Napotkaliśmy problem! (ry26)", Toast.LENGTH_SHORT).show()
@@ -324,7 +331,8 @@ class ChatActivity : AppCompatActivity() {
             if (result) {
                 val intent = Intent(this@ChatActivity, ChatActivity::class.java)
                 Toast.makeText(this@ChatActivity, "Zaproszenie zostało odrzucone", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             } else {
                 Toast.makeText(this@ChatActivity, "Napotkaliśmy problem! (ry26)", Toast.LENGTH_SHORT).show()
@@ -826,7 +834,8 @@ class ChatActivity : AppCompatActivity() {
             intent.putExtra("name", name)
 
             runOnUiThread {
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChatActivity).toBundle()
+                startActivity(intent, bundel)
             }
 
             return true

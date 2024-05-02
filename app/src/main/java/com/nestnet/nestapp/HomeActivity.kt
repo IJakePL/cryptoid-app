@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -108,8 +109,9 @@ class HomeActivity : ComponentActivity() {
 
         val MenuButton: EditText = findViewById(R.id.search)
         val Profile: LinearLayout = findViewById(R.id.profile)
-        val Action: LinearLayout = findViewById(R.id.action)
+        val Action: ImageButton = findViewById(R.id.action)
         val Chat: ImageButton = findViewById(R.id.chat)
+        val market: ImageButton = findViewById(R.id.market)
 
         val calendar = Calendar.getInstance()
         val locale = Locale("pl", "PL")
@@ -118,17 +120,26 @@ class HomeActivity : ComponentActivity() {
 
         Chat.setOnClickListener {
             val intent = Intent(this, ChatActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HomeActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         Profile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HomeActivity).toBundle()
+            startActivity(intent, bundel)
+        }
+
+        market.setOnClickListener {
+            val intent = Intent(this, MarketActivity::class.java)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HomeActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         Action.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@HomeActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
 //        reward.setOnClickListener {

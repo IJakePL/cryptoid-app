@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -46,14 +47,16 @@ class ConnectAccountActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, KontoActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val MethodButton: TextView = findViewById(R.id.dodaj)
 
         MethodButton.setOnClickListener {
             val intent = Intent(this, ConnectAccountMethodActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         val file = File(this@ConnectAccountActivity.filesDir, "user.json")
@@ -70,7 +73,8 @@ class ConnectAccountActivity : ComponentActivity() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 val intent = Intent(this@ConnectAccountActivity, MainActivity::class.java)
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ConnectAccountActivity).toBundle()
+                startActivity(intent, bundel)
                 finish()
             }
         }

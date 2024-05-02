@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -78,14 +79,16 @@ class ZacznijActivity : ComponentActivity() {
                         }
 
                         val intent = Intent(this@ZacznijActivity, SplashActivity::class.java)
-                        startActivity(intent)
+                        val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ZacznijActivity).toBundle()
+                        startActivity(intent, bundel)
                     } catch (e: Exception) {
                         println("Wystąpił błąd: $e")
                     }
                     Toast.makeText(context, "Twoje konto zostało utworzone.", Toast.LENGTH_SHORT).show()
                 } else {
                     val intent = Intent(this@ZacznijActivity, LoginActivity::class.java)
-                    startActivity(intent)
+                    val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ZacznijActivity).toBundle()
+                    startActivity(intent, bundel)
                     Toast.makeText(context, "Konto o podanym emailu już istnieje!", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -115,7 +118,8 @@ class ZacznijActivity : ComponentActivity() {
 
         dswButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ZacznijActivity).toBundle()
+            startActivity(intent, bundel)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.nestnet.nestapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.AsyncTask
@@ -31,7 +32,8 @@ class ChangePasswordActivity : ComponentActivity() {
 
         MenuButton.setOnClickListener {
             val intent = Intent(this, KontoActivity::class.java)
-            startActivity(intent)
+            val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangePasswordActivity).toBundle()
+            startActivity(intent, bundel)
         }
 
         var acctpass = ""
@@ -133,7 +135,8 @@ class ChangePasswordActivity : ComponentActivity() {
             if (result) {
                 val intent = Intent(this@ChangePasswordActivity, KontoActivity::class.java)
                 Toast.makeText(this@ChangePasswordActivity, "Zapisano nowe hasło!", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
+                val bundel = ActivityOptions.makeSceneTransitionAnimation(this@ChangePasswordActivity).toBundle()
+                startActivity(intent, bundel)
             } else {
                 Toast.makeText(this@ChangePasswordActivity, "Napotkaliśmy problem! (ht42)", Toast.LENGTH_SHORT).show()
             }
