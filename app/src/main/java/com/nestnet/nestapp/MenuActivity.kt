@@ -6,6 +6,7 @@ import android.content.res.ColorStateList
 import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageButton
@@ -13,6 +14,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.core.content.ContextCompat
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
@@ -24,6 +27,8 @@ import java.net.URL
 
 var userid = ""
 class MenuActivity : ComponentActivity() {
+
+    private val handler = Handler(Looper.getMainLooper())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menupage)
@@ -47,6 +52,14 @@ class MenuActivity : ComponentActivity() {
                 finish()
             }
         }
+
+        val adView = findViewById<AdView>(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+
+        handler.postDelayed({
+            adView.loadAd(adRequest)
+        }, 30000)
 
 //        switched.setOnClickListener {
 //            val jsonObject = JSONObject().apply {

@@ -107,6 +107,10 @@ class HomeActivity : ComponentActivity() {
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
+        handler.postDelayed({
+            adView.loadAd(adRequest)
+        }, 30000)
+
         val MenuButton: EditText = findViewById(R.id.search)
         val Profile: LinearLayout = findViewById(R.id.profile)
         val Action: ImageButton = findViewById(R.id.action)

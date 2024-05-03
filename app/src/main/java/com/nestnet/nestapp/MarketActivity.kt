@@ -142,6 +142,10 @@ class MarketActivity : ComponentActivity() {
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
+        handler.postDelayed({
+            adView.loadAd(adRequest)
+        }, 30000)
+
         val MenuButton: EditText = findViewById(R.id.search)
         val Action: ImageButton = findViewById(R.id.action)
         val Chat: ImageButton = findViewById(R.id.chat)
