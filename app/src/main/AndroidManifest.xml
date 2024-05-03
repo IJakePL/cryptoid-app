@@ -86,10 +86,6 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-6928750575920542~8661954966"/>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6928750575920542~8661954966"/>
-
         <service
             android:name=".utils.MyFirebaseMessagingService"
             android:exported="false">

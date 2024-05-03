@@ -186,88 +186,171 @@
                     tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_home"
-                android:padding="15dp"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total Balance"
-                        android:textColor="#8FFFFFFF"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="DeFi Wallet"
-                        android:textColor="#80000000"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="$0.00"
-                    android:textColor="#E8E8E8"
-                    android:textSize="35sp"
-                    android:textStyle="bold"
-                    android:visibility="visible" />
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:background="@drawable/corner_prf"
-                    android:backgroundTint="#171717"
-                    android:layout_marginTop="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageButton
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_gravity="center"
-                        android:background="@null"
-                        android:contentDescription="przycisk menu"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/arrow_trend_up"
-                        android:tint="#89c188"
-                        tools:ignore="UseAppTint" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="370dp"
                         android:layout_height="wrap_content"
-                        android:text="+$0.00"
-                        android:layout_marginLeft="5dp"
-                        android:textColor="#89c188"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
+                        android:layout_margin="10dp"
+                        android:background="@drawable/gradient_home"
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Balance"
+                                android:textColor="#8FFFFFFF"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DeFi Wallet"
+                                android:textColor="#80000000"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="$0.00"
+                            android:textColor="#E8E8E8"
+                            android:textSize="35sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#171717"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp">
+
+                            <ImageButton
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:contentDescription="przycisk menu"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/arrow_trend_up"
+                                android:tint="#89c188"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="+$0.00"
+                                android:textColor="#89c188"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient"
+                        android:padding="15dp"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Balance"
+                                android:textColor="#8FFFFFFF"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NanoCoin"
+                                android:textColor="#80000000"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="$0.00"
+                            android:textColor="#E8E8E8"
+                            android:textSize="35sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#171717"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00000000 NACO"
+                                android:textColor="#89c188"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </HorizontalScrollView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -345,7 +428,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <com.google.android.gms.ads.AdView
