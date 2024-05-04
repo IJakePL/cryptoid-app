@@ -186,171 +186,16 @@
                     tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
 
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="370dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/gradient_home"
-                        android:orientation="vertical"
-                        android:padding="15dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Total Balance"
-                                android:textColor="#8FFFFFFF"
-                                android:textSize="15sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="1" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="DeFi Wallet"
-                                android:textColor="#80000000"
-                                android:textSize="15sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="$0.00"
-                            android:textColor="#E8E8E8"
-                            android:textSize="35sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/corner_prf"
-                            android:backgroundTint="#171717"
-                            android:orientation="horizontal"
-                            android:paddingLeft="10dp"
-                            android:paddingTop="5dp"
-                            android:paddingRight="10dp"
-                            android:paddingBottom="5dp">
-
-                            <ImageButton
-                                android:layout_width="18dp"
-                                android:layout_height="18dp"
-                                android:layout_gravity="center"
-                                android:background="@null"
-                                android:contentDescription="przycisk menu"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/arrow_trend_up"
-                                android:tint="#89c188"
-                                tools:ignore="UseAppTint" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="+$0.00"
-                                android:textColor="#89c188"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="370dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/gradient"
-                        android:padding="15dp"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Total Balance"
-                                android:textColor="#8FFFFFFF"
-                                android:textSize="15sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="1" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="NanoCoin"
-                                android:textColor="#80000000"
-                                android:textSize="15sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="$0.00"
-                            android:textColor="#E8E8E8"
-                            android:textSize="35sp"
-                            android:textStyle="bold"
-                            android:visibility="visible" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:background="@drawable/corner_prf"
-                            android:backgroundTint="#171717"
-                            android:layout_marginTop="5dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:paddingTop="5dp"
-                            android:paddingBottom="5dp"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0.00000000 NACO"
-                                android:textColor="#89c188"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -445,6 +290,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -457,7 +305,7 @@
                         android:layout_height="wrap_content"
                         android:text="Portfolio"
                         android:textColor="#CDCFCD"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
 
@@ -472,7 +320,7 @@
                         android:text="View all"
                         android:layout_gravity="center"
                         android:textColor="#454545"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
                 </LinearLayout>
@@ -482,7 +330,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#232523"
+                    android:backgroundTint="#171717"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
 
@@ -1032,6 +880,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -1042,56 +893,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Transaction history"
+                        android:text="Favorite crypto"
                         android:textColor="#CDCFCD"
-                        android:textSize="25sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View full"
-                        android:layout_gravity="center"
-                        android:textColor="#454545"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:backgroundTint="#ffffff"
-                    android:background="@drawable/corner_ust"
-                    android:orientation="vertical">
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Favorite currencies"
-                        android:textColor="#CDCFCD"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
 
@@ -1113,13 +917,13 @@
                             android:layout_gravity="center"
                             android:textColor="#454545"
                             android:layout_marginRight="5dp"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textStyle="bold"
                             android:visibility="visible" />
 
                         <ImageButton
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
                             android:layout_gravity="center"
                             android:background="@null"
                             android:contentDescription="przycisk menu"
@@ -1135,7 +939,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#171717"
+                    android:padding="10dp"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
                 </LinearLayout>
@@ -1145,6 +950,515 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transaction history"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View full"
+                        android:layout_gravity="center"
+                        android:textColor="#454545"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#171717"
+                    android:padding="10dp"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affiliate program"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/angle_right"
+                            android:tint="#454545"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#171717"
+                    android:padding="10dp"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite individuals to join and earn a bonus percentage of their earnings in BTC. Grow your referral network up to Level 10 – even a small circle of friends could lead to thousands of referrals."
+                        android:textColor="#454545"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#232523"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/corner_ust"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/afflink"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="https://cryptoid.pl/affiliate/23984724534"
+                            android:textColor="#CDCFCD"
+                            android:textSize="13sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:backgroundTint="#232523"
+                            android:background="@drawable/corner_ust"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <ImageButton
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:contentDescription="przycisk menu"
+                                android:scaleType="fitCenter"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/copy_alt"
+                                android:tint="#959595"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Copy"
+                                android:layout_gravity="center"
+                                android:textColor="#959595"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:padding="5dp"
+                            android:backgroundTint="#232523"
+                            android:background="@drawable/corner_ust"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <ImageButton
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:contentDescription="przycisk menu"
+                                android:scaleType="fitCenter"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/share"
+                                android:tint="#959595"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Share"
+                                android:layout_gravity="center"
+                                android:textColor="#959595"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Referral network"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/angle_right"
+                            android:tint="#454545"
+                            tools:ignore="UseAppTint" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#171717"
+                    android:padding="10dp"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Boost your earnings by sharing promotional content using your link across social media platforms and messaging apps to attract referrals."
+                        android:textColor="#454545"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View statistics"
+                        android:textAlignment="center"
+                        android:background="@drawable/corner_ust"
+                        android:backgroundTint="#232523"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Join the CryptoID community"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#171717"
+                    android:padding="10dp"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stay ahead with the freshest updates, promotions, and exclusive offers."
+                        android:textColor="#454545"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#FFFFFF"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/facebook"
+                            android:tint="#1878F3"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#A336A3"
+                            android:padding="6dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/instagram"
+                            android:tint="#FFFFFF"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#000000"
+                            android:padding="5dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/tiktok"
+                            android:tint="#FFFFFF"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#FFFFFF"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/telegram"
+                            android:tint="#31A5E0"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#FFFFFF"
+                            android:padding="3dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/github"
+                            android:tint="#000000"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#5B68F2"
+                            android:padding="5dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/discord"
+                            android:tint="#FFFFFF"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#000000"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/twitter"
+                            android:tint="#FFFFFF"
+                            tools:ignore="UseAppTint" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/corner_prf"
+                            android:backgroundTint="#FF0000"
+                            android:padding="5dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/youtube"
+                            android:tint="#FFFFFF"
+                            tools:ignore="UseAppTint" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#232523"
+                android:background="@drawable/corner_ust"
+                android:padding="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -1157,7 +1471,7 @@
                         android:layout_height="wrap_content"
                         android:text="Latest news"
                         android:textColor="#CDCFCD"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
 
@@ -1179,13 +1493,13 @@
                             android:layout_gravity="center"
                             android:textColor="#454545"
                             android:layout_marginRight="5dp"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textStyle="bold"
                             android:visibility="visible" />
 
                         <ImageButton
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
                             android:layout_gravity="center"
                             android:background="@null"
                             android:contentDescription="przycisk menu"
@@ -1201,7 +1515,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#ffffff"
+                    android:backgroundTint="#171717"
+                    android:padding="10dp"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
                 </LinearLayout>
@@ -1258,7 +1573,6 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/separator10"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />

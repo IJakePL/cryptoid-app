@@ -25,7 +25,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -33,6 +36,7 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.OnUserEarnedRewardListener
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import com.nestnet.nestapp.Fragment.MyPagerAdapter
 import com.nestnet.nestapp.models.ChatMessage
 import org.json.JSONObject
 import java.io.File
@@ -51,12 +55,15 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class HomeActivity : ComponentActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private var wasConnected = false
     private final var TAG = "MainActivity"
     private var rewardedAd: RewardedAd? = null
     private val handler = Handler(Looper.getMainLooper())
+
+    private lateinit var viewPager: ViewPager2
+    private lateinit var adapter: MyPagerAdapter
 
     var name = ""
     var plan = ""
@@ -102,14 +109,6 @@ class HomeActivity : ComponentActivity() {
         }
 
         wasConnected = CheckNetwork.isWifiConnected(this@HomeActivity)
-
-        val adView = findViewById<AdView>(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
-
-        handler.postDelayed({
-            adView.loadAd(adRequest)
-        }, 30000)
 
         val MenuButton: EditText = findViewById(R.id.search)
         val Profile: LinearLayout = findViewById(R.id.profile)
@@ -158,6 +157,21 @@ class HomeActivity : ComponentActivity() {
 
         val welc_name: TextView = findViewById(R.id.welc_name)
         welc_name.setText("$name")
+
+        val afflink: TextView = findViewById(R.id.afflink)
+        afflink.setText("https://cryptoid.pl/affiliate/v1/" + userId)
+
+        viewPager = findViewById(R.id.viewPager)
+        adapter = MyPagerAdapter(this)
+        viewPager.adapter = adapter
+
+        val adView = findViewById<AdView>(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+
+        handler.postDelayed({
+            adView.loadAd(adRequest)
+        }, 30000)
     }
 
     private fun rewardedAd() {
