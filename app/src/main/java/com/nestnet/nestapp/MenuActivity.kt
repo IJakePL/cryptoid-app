@@ -57,10 +57,6 @@ class MenuActivity : ComponentActivity() {
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
-        handler.postDelayed({
-            adView.loadAd(adRequest)
-        }, 30000)
-
 //        switched.setOnClickListener {
 //            val jsonObject = JSONObject().apply {
 //                put("email", "")
@@ -91,37 +87,6 @@ class MenuActivity : ComponentActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             val bundel = ActivityOptions.makeSceneTransitionAnimation(this@MenuActivity).toBundle()
             startActivity(intent, bundel)
-        }
-    }
-
-    private inner class OfflineActv : AsyncTask<String, Void, List<String>>() {
-        override fun doInBackground(vararg params: String): List<String> {
-            val id_user = params[0]
-            val results = mutableListOf<String>()
-
-            try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
-                val connection = url.openConnection() as HttpURLConnection
-                connection.requestMethod = "POST"
-                connection.doOutput = true
-
-                val outputStream = OutputStreamWriter(connection.outputStream)
-                val payload = "id_user=$id_user&status=Offline"
-                outputStream.write(payload)
-                outputStream.flush()
-
-                val responseCode = connection.responseCode
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    val inputStream = connection.inputStream
-                    val response = inputStream.bufferedReader().use { it.readText() }
-
-                    val jsonArray = JSONArray(response)
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-
-            return results
         }
     }
 }

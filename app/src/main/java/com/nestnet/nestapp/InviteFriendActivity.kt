@@ -84,13 +84,15 @@ class InviteFriendActivity : ComponentActivity() {
             val id_sender = params[1]
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/invite/friend/wait")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/invite/friend/wait")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
 
+                var key = "e24863b1ad3d8c30363fd085da0ee00e932b6c5ae5e9398a2d525ad765d42b72"
+
                 val outputStream = OutputStreamWriter(connection.outputStream)
-                val payload = "id_user=$id_user&id_sender=$id_sender"
+                val payload = "id_user=$id_user&id_sender=$id_sender&apikey=$key"
                 outputStream.write(payload)
                 outputStream.flush()
 

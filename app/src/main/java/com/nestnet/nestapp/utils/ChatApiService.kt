@@ -8,16 +8,16 @@ import retrofit2.http.Path
 
 class ChatApiService {
     interface Service {
-        @GET("/messages/to/{userId}&{userFrom}")
+        @GET("/api/v1/messages/to/{userId}&{userFrom}")
         suspend fun getReceivedMessages(@Path("userId") userId: String, @Path("userFrom") userFrom: String): List<ChatMessage>
 
-        @GET("/messages/from/{userId}&{userFrom}")
+        @GET("/api/v1/messages/from/{userId}&{userFrom}")
         suspend fun getSentMessages(@Path("userId") userId: String, @Path("userFrom") userFrom: String): List<ChatMessage>
 
-        @POST("/messages")
+        @POST("/api/v1/messages")
         suspend fun sendMessage(@Body message: ChatMessage)
 
-        @GET("/messages/all/{userId}&{userFrom}")
+        @GET("/api/v1/messages/all/{userId}&{userFrom}")
         suspend fun getAllMessages(@Path("userId") userId: String, @Path("userFrom") userFrom: String): List<ChatMessage>
     }
 }

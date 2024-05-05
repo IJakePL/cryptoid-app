@@ -155,7 +155,7 @@ class ChatActivity : AppCompatActivity() {
             val id_sender = user_ids
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/invite/friend/accept")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/invite/friend/accept")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -204,7 +204,7 @@ class ChatActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/friend/accept")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/friend/accept")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -248,13 +248,15 @@ class ChatActivity : AppCompatActivity() {
             val id_sender = user_ids
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/invite/friend/send/cancel")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/invite/friend/send/cancel")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
 
+                var key = "e24863b1ad3d8c30363fd085da0ee00e932b6c5ae5e9398a2d525ad765d42b72"
+
                 val outputStream = OutputStreamWriter(connection.outputStream)
-                val payload = "id_user=$id_user&id_sender=$id_sender"
+                val payload = "id_user=$id_user&id_sender=$id_sender&apikey=$key"
                 outputStream.write(payload)
                 outputStream.flush()
 
@@ -297,7 +299,7 @@ class ChatActivity : AppCompatActivity() {
             val id_sender = user_ids
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/invite/friend/cancel")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/invite/friend/cancel")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -347,7 +349,7 @@ class ChatActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/friend/wait")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/friend/wait")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -391,7 +393,7 @@ class ChatActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/friend/send")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/friend/send")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -435,7 +437,7 @@ class ChatActivity : AppCompatActivity() {
             id_user = params[0]
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/friend/info")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/friend/info")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -590,7 +592,7 @@ class ChatActivity : AppCompatActivity() {
             id_user = params[0]
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/friend/info/send")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/friend/info/send")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -722,7 +724,7 @@ class ChatActivity : AppCompatActivity() {
             id_user = params[0]
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/friend/info/accept")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/friend/info/accept")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true

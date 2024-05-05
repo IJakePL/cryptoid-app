@@ -40,12 +40,14 @@ class ZacznijActivity : ComponentActivity() {
         class SendDataToServerTask(private val context: Context, private val nazwa: String, private val email: String, private val haslo: String, private val referral: String) : AsyncTask<Void, Void, Boolean>() {
             override fun doInBackground(vararg params: Void?): Boolean {
                 return try {
-                    val url = URL("http://fi3.bot-hosting.net:20688/api/create/accounts")
+                    val url = URL("http://fi3.bot-hosting.net:20688/api/v1/create/accounts")
                     val connection = url.openConnection() as HttpURLConnection
                     connection.requestMethod = "POST"
                     connection.doOutput = true
 
-                    val payload = "nazwa=$nazwa&email=$email&haslo=$haslo&referral=$referral"
+                    var key = "e24863b1ad3d8c30363fd085da0ee00e932b6c5ae5e9398a2d525ad765d42b72"
+
+                    val payload = "nazwa=$nazwa&email=$email&haslo=$haslo&referral=$referral&apikey=$key"
                     val outputStream = OutputStreamWriter(connection.outputStream)
                     outputStream.write(payload)
                     outputStream.flush()

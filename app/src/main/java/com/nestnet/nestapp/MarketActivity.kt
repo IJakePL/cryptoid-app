@@ -142,10 +142,6 @@ class MarketActivity : ComponentActivity() {
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
-        handler.postDelayed({
-            adView.loadAd(adRequest)
-        }, 30000)
-
         val MenuButton: EditText = findViewById(R.id.search)
         val Action: ImageButton = findViewById(R.id.action)
         val Chat: ImageButton = findViewById(R.id.chat)
@@ -225,7 +221,7 @@ class MarketActivity : ComponentActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/v1/api-pro/simple/price")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/api-pro/simple/price")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -685,7 +681,7 @@ class MarketActivity : ComponentActivity() {
                 val calendar = Calendar.getInstance()
                 val date = SimpleDateFormat("dd.MM.yyyy HH:mm").format(calendar.time)
 
-                val url = URL("http://fi3.bot-hosting.net:20688/api/hash/rate/boost")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/hash/rate/boost")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -761,7 +757,7 @@ class MarketActivity : ComponentActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/status/user/change")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -792,7 +788,7 @@ class MarketActivity : ComponentActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/status/user/change")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -823,7 +819,7 @@ class MarketActivity : ComponentActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/status/user/change")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true

@@ -97,14 +97,15 @@ class ChangeEmailActivity : ComponentActivity() {
             Log.d("ChangeEmailActivity", "Rozpoczęto zadanie doInBackground")
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/change/email/account")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/change/email/account")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
 
+                var key = "e24863b1ad3d8c30363fd085da0ee00e932b6c5ae5e9398a2d525ad765d42b72"
+
                 val outputStream = OutputStreamWriter(connection.outputStream)
-                val payload = "email=$email&email_acctualy=$email_actually"
-                Log.d("ChangeEmailActivity", "email: " + email + " | act: " + email_actually)
+                val payload = "email=$email&email_acctualy=$email_actually&apikey=$key"
                 outputStream.write(payload)
                 outputStream.flush()
 

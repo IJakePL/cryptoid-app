@@ -168,10 +168,6 @@ class HomeActivity : AppCompatActivity() {
         val adView = findViewById<AdView>(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
-
-        handler.postDelayed({
-            adView.loadAd(adRequest)
-        }, 30000)
     }
 
     private fun rewardedAd() {
@@ -214,7 +210,7 @@ class HomeActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/v1/api-pro/simple/price")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/api-pro/simple/price")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -323,13 +319,15 @@ class HomeActivity : AppCompatActivity() {
                 val calendar = Calendar.getInstance()
                 val date = SimpleDateFormat("dd.MM.yyyy HH:mm").format(calendar.time)
 
-                val url = URL("http://fi3.bot-hosting.net:20688/api/hash/rate/boost")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/hash/rate/boost")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
 
+                var key = "e24863b1ad3d8c30363fd085da0ee00e932b6c5ae5e9398a2d525ad765d42b72"
+
                 val outputStream = OutputStreamWriter(connection.outputStream)
-                val payload = "userId=$id_user&startTime=$date"
+                val payload = "userId=$id_user&startTime=$date&apikey=$key"
                 outputStream.write(payload)
                 outputStream.flush()
 
@@ -399,7 +397,7 @@ class HomeActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/status/user/change")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -430,7 +428,7 @@ class HomeActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/status/user/change")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
@@ -461,7 +459,7 @@ class HomeActivity : AppCompatActivity() {
             val results = mutableListOf<String>()
 
             try {
-                val url = URL("http://fi3.bot-hosting.net:20688/api/search/status/user/change")
+                val url = URL("http://fi3.bot-hosting.net:20688/api/v1/search/status/user/change")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
