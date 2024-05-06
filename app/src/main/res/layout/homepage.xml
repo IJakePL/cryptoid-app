@@ -214,24 +214,25 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="9dp"
                         android:layout_gravity="center"
-                        android:background="@null"
+                        android:background="@drawable/gradient_home_bar"
                         android:contentDescription="przycisk menu"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/download"
-                        android:tint="#959595"
+                        android:src="@drawable/plus"
+                        android:tint="#FFF"
                         tools:ignore="UseAppTint" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Receive"
+                        android:text="Buy"
                         android:layout_marginTop="5dp"
                         android:layout_gravity="center"
-                        android:textColor="#959595"
-                        android:textSize="17sp"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
                 </LinearLayout>
@@ -240,21 +241,90 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:padding="10dp"
                     android:backgroundTint="#232523"
                     android:background="@drawable/corner_ust"
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="9dp"
                         android:layout_gravity="center"
-                        android:background="@null"
+                        android:background="@drawable/gradient_home_bar"
+                        android:contentDescription="przycisk menu"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/minus1"
+                        android:tint="#FFF"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sell"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:backgroundTint="#232523"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/gradient_home_bar"
+                        android:contentDescription="przycisk menu"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/download"
+                        android:tint="#FFF"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Receive"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="10dp"
+                    android:backgroundTint="#232523"
+                    android:background="@drawable/corner_ust"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/gradient_home_bar"
                         android:contentDescription="przycisk menu"
                         android:scaleType="fitCenter"
                         android:src="@drawable/upload"
-                        android:tint="#959595"
+                        android:tint="#FFF"
                         tools:ignore="UseAppTint" />
 
                     <TextView
@@ -263,8 +333,8 @@
                         android:text="Send"
                         android:layout_marginTop="5dp"
                         android:layout_gravity="center"
-                        android:textColor="#959595"
-                        android:textSize="17sp"
+                        android:textColor="#CDCFCD"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:visibility="visible" />
                 </LinearLayout>
@@ -340,6 +410,17 @@
                         android:padding="10dp"
                         android:background="@drawable/corner_home_coins"
                         android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_15"
+                            tools:ignore="UseAppTint" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -443,7 +524,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
-                                    android:text="~$0.00"
+                                    android:text="~0.00 USD"
                                     android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
@@ -457,16 +538,6 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/img_15"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -475,6 +546,17 @@
                         android:padding="10dp"
                         android:background="@drawable/corner_home_coins"
                         android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_16"
+                            tools:ignore="UseAppTint" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -578,7 +660,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
-                                    android:text="~$0.00"
+                                    android:text="~0.00 USD"
                                     android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
@@ -592,16 +674,6 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/img_16"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -610,6 +682,17 @@
                         android:padding="10dp"
                         android:background="@drawable/corner_home_coins"
                         android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="przycisk menu"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_17"
+                            tools:ignore="UseAppTint" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -713,7 +796,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
-                                    android:text="~$0.00"
+                                    android:text="~0.00 USD"
                                     android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
@@ -727,6 +810,13 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
 
                         <ImageButton
                             android:layout_width="40dp"
@@ -735,16 +825,9 @@
                             android:background="@null"
                             android:contentDescription="przycisk menu"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/img_17"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/img_18"
                             tools:ignore="UseAppTint" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:padding="10dp"
-                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -848,7 +931,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
-                                    android:text="~$0.00"
+                                    android:text="~0.00 USD"
                                     android:textColor="#454545"
                                     android:textSize="15sp"
                                     android:layout_gravity="center"
@@ -862,16 +945,6 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
-
-                        <ImageButton
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:contentDescription="przycisk menu"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/img_18"
-                            tools:ignore="UseAppTint" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -1076,7 +1149,7 @@
                             android:id="@+id/afflink"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="https://cryptoid.pl/affiliate/23984724534"
+                            android:text="https://safecoin.pl/affiliate/23984724534"
                             android:textColor="#CDCFCD"
                             android:textSize="13sp"
                             android:visibility="visible" />

@@ -159,7 +159,7 @@ class HomeActivity : AppCompatActivity() {
         welc_name.setText("$name")
 
         val afflink: TextView = findViewById(R.id.afflink)
-        afflink.setText("https://cryptoid.pl/affiliate/v1/" + userId)
+        afflink.setText("https://safecoin.pl/affiliate/v1/" + userId)
 
         viewPager = findViewById(R.id.viewPager)
         adapter = MyPagerAdapter(this)
